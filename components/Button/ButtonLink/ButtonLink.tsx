@@ -1,6 +1,6 @@
 import Link from 'next/link';
 import React, { HTMLAttributes } from 'react';
-import { RightArrow } from '../Svgs/RightArrow';
+import { RightArrow } from '../../Svgs/RightArrow';
 
 type ButtonLinkProps = HTMLAttributes<HTMLButtonElement> & {
   href: string;

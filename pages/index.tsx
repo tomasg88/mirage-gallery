@@ -4,7 +4,7 @@ import HomeOurDrops from '@/components/Home/HomeOurDrops';
 import HeroTitle from '@/components/HeroTitle/HeroTitle';
 import Link from 'next/link';
 import { RightArrow } from '@/components/Svgs/RightArrow';
-import { ButtonLink } from '@/components/Button/ButtonLink';
+import { ButtonLink } from '@/components/Button/ButtonLink/ButtonLink';
 
 export default function Home() {
   return (
