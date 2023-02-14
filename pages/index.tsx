@@ -1,7 +1,7 @@
 import HomeHero from '@/components/Home/HomeHero';
 import HomeCuratedImages from '@/components/Home/HomeCuratedImages';
 import HomeOurDrops from '@/components/Home/HomeOurDrops';
-import HeroTitle from '@/components/ui/HeroTitle';
+import HeroTitle from '@/components/HeroTitle/HeroTitle';
 import Link from 'next/link';
 import { RightArrow } from '@/components/Svgs/RightArrow';
 
