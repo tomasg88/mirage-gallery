@@ -5,6 +5,9 @@ module.exports = {
     "./components/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
+    fontFamily: {
+      base: ["Unbounded", "mono"],
+    },
     extend: {},
   },
   plugins: [],
