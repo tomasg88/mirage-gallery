@@ -1,12 +1,13 @@
-import { Swiper, SwiperSlide } from "swiper/react";
-import Image from "next/image";
+import { Swiper, SwiperSlide } from 'swiper/react';
+import Image from 'next/image';
 // Import Swiper styles
-import "swiper/css";
-import { GALLERY } from "@/utils/gallery";
-import "swiper/css/navigation";
+import 'swiper/css';
+import { GALLERY } from '@/utils/gallery';
+import 'swiper/css/navigation';
 
-import { Pagination } from "swiper";
-import { Navigation } from "swiper";
+import { Pagination } from 'swiper';
+import { Navigation } from 'swiper';
+import { RightArrow } from '../Svgs/RightArrow';
 
 export default function HomeHero() {
   return (
@@ -50,36 +51,7 @@ export default function HomeHero() {
                   </span>
                   <span className="flex items-center justify-center px-3 py-2 text-white bg-black">
                     View drop
-                    <svg
-                      width="16"
-                      height="12"
-                      viewBox="0 0 16 12"
-                      fill="none"
-                      className="ml-2"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path
-                        d="M15 6H1"
-                        stroke="white"
-                        strokeWidth="1.5"
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                      />
-                      <path
-                        d="M10 11L15 6"
-                        stroke="white"
-                        strokeWidth="1.5"
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                      />
-                      <path
-                        d="M10 1L15 6"
-                        stroke="white"
-                        strokeWidth="1.5"
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                      />
-                    </svg>
+                    <RightArrow className="ml-2" />
                   </span>
                 </div>
                 <h2 className="my-6 text-3xl slide-item-inview">{i.title}</h2>
