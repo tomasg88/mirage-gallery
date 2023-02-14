@@ -1,4 +1,4 @@
-import { WalletSvg } from '../Svgs/WalletSvg';
+import { WalletSvg } from '../../Svgs/WalletSvg';
 
 export default function Footer() {
   return (
