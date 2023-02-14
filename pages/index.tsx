@@ -4,6 +4,7 @@ import HomeOurDrops from '@/components/Home/HomeOurDrops';
 import HeroTitle from '@/components/HeroTitle/HeroTitle';
 import Link from 'next/link';
 import { RightArrow } from '@/components/Svgs/RightArrow';
+import { ButtonLink } from '@/components/Button/ButtonLink';
 
 export default function Home() {
   return (
@@ -51,13 +52,12 @@ export default function Home() {
             <HomeCuratedImages />
           </div>
           <div className="flex items-center justify-start mt-6">
-            <Link
-              href="/crypto-native"
+            <ButtonLink
               className="bg-[#431281] flex px-6 py-4 items-center justify-center text-white"
-            >
-              Explore crypto native
-              <RightArrow className="ml-2" />
-            </Link>
+              href="/crypto-native"
+              showRightArrow
+              text="Explore crypto native"
+            />
           </div>
         </section>
         <section>
@@ -78,13 +78,12 @@ export default function Home() {
             <HomeCuratedImages />
           </div>
           <div className="flex items-center justify-start mt-6">
-            <Link
-              href="/curated"
+            <ButtonLink
               className="bg-[#920d3d] flex px-6 py-4 items-center justify-center text-white"
-            >
-              Explore curated
-              <RightArrow className="ml-2" />
-            </Link>
+              href="/curated"
+              showRightArrow
+              text="Explore curated"
+            />
           </div>
         </section>
         <section>
@@ -102,13 +101,12 @@ export default function Home() {
             <HomeCuratedImages />
           </div>
           <div className="flex items-center justify-start mt-6">
-            <Link
-              href="/dreamers"
+            <ButtonLink
               className="bg-[#1129aa] flex px-6 py-4 items-center justify-center text-white"
-            >
-              Explore dreamers
-              <RightArrow className="ml-2" />
-            </Link>
+              href="/dreamers"
+              text="Explore dreamers"
+              showRightArrow
+            />
           </div>
         </section>
         <section>
