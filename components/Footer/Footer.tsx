@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import { MirageGalleryLogo } from '../MirageGalleryLogo';
+import { MirageGalleryLogo } from '../Svgs/MirageGalleryLogo';
 import { ROUTES } from '@/utils/routes';
 import { DiscordSvg } from '../Svgs/DiscordSvg';
 import { TwitterSvg } from '../Svgs/TwitterSvg';
