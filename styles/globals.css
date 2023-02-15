@@ -1,3 +1,29 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+* {
+  @apply font-base;
+}
+
+.disabled {
+  @apply pointer-events-none cursor-default select-none opacity-20;
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+  @apply bg-black w-12 h-12 rounded-full top-64 !important;
+}
+
+.swiper-button-next:after,
+.swiper-button-prev:after {
+  @apply !text-sm text-white w-6 h-6 flex justify-center items-center;
+}
+
+.slide-item-inview {
+  @apply opacity-0 duration-1000;
+}
+
+.swiper-slide-active .slide-item-inview {
+  @apply opacity-100;
+}
