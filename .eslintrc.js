@@ -23,7 +23,7 @@ module.exports = {
     ecmaVersion: 12,
     sourceType: 'module',
   },
-  plugins: ['react'],
+  plugins: ['react', 'no-relative-import-paths'],
   rules: {
     // Possible errors
     'no-console': 'warn',
@@ -47,6 +47,10 @@ module.exports = {
         allowTemplateLiterals: false,
         avoidEscape: true,
       },
+    ],
+    'no-relative-import-paths/no-relative-import-paths': [
+      'error',
+      { allowSameFolder: true },
     ],
     // ES6
     'array-callback-return': 'off',
