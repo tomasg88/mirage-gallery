@@ -22,8 +22,8 @@ export default function DreamersHero() {
           </p>
           <div className="grid max-w-xl grid-cols-2 gap-3">
             <button
-              type="button"
               className="flex items-center justify-center py-3 text-black duration-300 bg-gray-200 hover:bg-gray-100"
+              type="button"
             >
               <OpenSeaLogo className={'mr-2'} />
               View on Opensea

@@ -15,7 +15,7 @@ export const ButtonLink = ({
   showRightArrow,
 }: ButtonLinkProps) => {
   return (
-    <Link href={href} className={className}>
+    <Link className={className} href={href}>
       {text}
       {showRightArrow && <RightArrow className="ml-2" />}
     </Link>

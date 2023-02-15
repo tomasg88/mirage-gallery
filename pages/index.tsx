@@ -13,15 +13,15 @@ export default function Home() {
       <HomeOurDrops />
       <div className="w-full px-2 space-y-64 max-w-screen-2xl">
         <section className="pt-64">
-          <HeroTitle subtitle="What is Mirage?" accentColor={''}>
+          <HeroTitle accentColor={''} subtitle="What is Mirage?">
             Mirage Gallery was founded on the premise that art can be
             <span className="text-[#808080]"> more than human.</span>
           </HeroTitle>
         </section>
         <section>
           <HeroTitle
-            subtitle="ALEJANDRO & TAYLOR"
             accentColor={'text-[#074f65]'}
+            subtitle="ALEJANDRO & TAYLOR"
           >
             Mirage Gallery started with creating entirely{' '}
             <span className="text-[#074f65] underline">
@@ -35,9 +35,9 @@ export default function Home() {
           </p>
         </section>
         <section>
-          <HeroTitle subtitle="CRYPTO NATIVE" accentColor={'text-[#431281]'}>
+          <HeroTitle accentColor={'text-[#431281]'} subtitle="CRYPTO NATIVE">
             With{' '}
-            <Link href="/crypto-native" className="text-[#431281] underline">
+            <Link className="text-[#431281] underline" href="/crypto-native">
               Crypto-Native
             </Link>
             , the artwork evolves when a secondary sale happens.
@@ -61,10 +61,10 @@ export default function Home() {
           </div>
         </section>
         <section>
-          <HeroTitle subtitle="CURATED" accentColor={'text-[#920d3d]'}>
+          <HeroTitle accentColor={'text-[#920d3d]'} subtitle="CURATED">
             Mirage Gallery has now expanded and works with other artists (not
             A.I. generated ones) with{' '}
-            <Link href="/curated" className="text-[#920d3d] underline">
+            <Link className="text-[#920d3d] underline" href="/curated">
               Mirage Gallery Curated.
             </Link>
           </HeroTitle>
@@ -87,7 +87,7 @@ export default function Home() {
           </div>
         </section>
         <section>
-          <HeroTitle subtitle="Dreamers" accentColor={'text-[#1129aa]'}>
+          <HeroTitle accentColor={'text-[#1129aa]'} subtitle="Dreamers">
             The artistic intersection of humans and artificial intelligence. We
             are <span className="text-[#1129aa] underline">Dreamers.</span>
           </HeroTitle>
@@ -104,13 +104,13 @@ export default function Home() {
             <ButtonLink
               className="bg-[#1129aa] flex px-6 py-4 items-center justify-center text-white"
               href="/dreamers"
-              text="Explore dreamers"
               showRightArrow
+              text="Explore dreamers"
             />
           </div>
         </section>
         <section>
-          <HeroTitle subtitle="Memberships" accentColor={'text-[#e2b310]'}>
+          <HeroTitle accentColor={'text-[#e2b310]'} subtitle="Memberships">
             Mirage Gallery also offers{' '}
             <span className="text-[#e2b310] underline">Memberships</span> which
             give early access to curated drops, and more.
@@ -127,8 +127,8 @@ export default function Home() {
           </div>
           <div className="flex items-center justify-start mt-12 mb-32">
             <Link
-              href="/membership"
               className="bg-[#e2b310] flex px-6 py-4 items-center justify-center"
+              href="/membership"
             >
               Explore memberships
               <RightArrow className="ml-2" stroke={'#000'} />

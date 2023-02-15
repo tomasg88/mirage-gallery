@@ -13,11 +13,11 @@ export default function Footer() {
           {ROUTES.map((route) => {
             return (
               <Link
+                aria-label={route.ariaLabel}
+                className="text-xs font-normal text-gray-400 hover:text-[#920d3d] uppercase duration-100 cursor-pointer underline-offset-2 hover:underline"
                 href={route.path}
                 key={route.path}
                 title={route.ariaLabel}
-                className="text-xs font-normal text-gray-400 hover:text-[#920d3d] uppercase duration-100 cursor-pointer underline-offset-2 hover:underline"
-                aria-label={route.ariaLabel}
               >
                 {route.title}
               </Link>
