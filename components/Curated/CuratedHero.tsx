@@ -32,7 +32,7 @@ export default function CuratedHero() {
               className="bg-[#920d3d] flex justify-center items-center text-white py-3"
             >
               Mint
-              <RightArrow />
+              <RightArrow className="ml-2" />
             </button>
           </div>
         </div>
