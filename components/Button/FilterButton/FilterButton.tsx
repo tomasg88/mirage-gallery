@@ -10,7 +10,7 @@ export const FilterButton = ({
   className = '', // init with white space if nothing is passed
 }: FilterButtonProps) => {
   return (
-    <button type="button" className={styles.root + ' ' + className}>
+    <button className={styles.root + ' ' + className} type="button">
       {children}
     </button>
   );

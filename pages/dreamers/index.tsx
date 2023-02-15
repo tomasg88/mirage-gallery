@@ -1,4 +1,4 @@
-import DreamersHero from "@/components/Dreamers/DreamersHero";
+import DreamersHero from 'components/Dreamers/DreamersHero';
 
 export default function DreamersPage() {
   return (

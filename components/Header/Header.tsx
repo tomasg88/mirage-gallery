@@ -1,12 +1,13 @@
 import Link from 'next/link';
-import { ROUTES } from '@/utils/routes';
-import { MirageGalleryLogo } from '../Svgs/MirageGalleryLogo';
-import ConnectWalletButton from '@/components/Button/ConnectWalletButton/ConnectWalletButton';
+import { ROUTES } from 'utils/routes';
+import { MirageGalleryLogo } from 'components/Svgs/MirageGalleryLogo';
+import ConnectWalletButton from 'components/Button/ConnectWalletButton/ConnectWalletButton';
+
 export default function Header() {
   return (
     <header className="fixed top-0 left-0 right-0 z-50 px-2 py-6 bg-white border-b border-gray-200">
       <div className="flex items-center justify-start w-full mx-auto space-x-6 sm:space-x-8 max-w-screen-2xl">
-        <Link href="/" className="text-gray-900">
+        <Link className="text-gray-900" href="/">
           <MirageGalleryLogo />
           <span className="sr-only">Mirage Gallery</span>
         </Link>
@@ -14,11 +15,11 @@ export default function Header() {
           {ROUTES.map((route) => {
             return (
               <Link
+                aria-label={route.ariaLabel}
+                className="text-xs font-normal text-gray-400 hover:text-[#920d3d] uppercase duration-100 cursor-pointer underline-offset-2 hover:underline"
                 href={route.path}
                 key={route.path}
                 title={route.ariaLabel}
-                className="text-xs font-normal text-gray-400 hover:text-[#920d3d] uppercase duration-100 cursor-pointer underline-offset-2 hover:underline"
-                aria-label={route.ariaLabel}
               >
                 {route.title}
               </Link>

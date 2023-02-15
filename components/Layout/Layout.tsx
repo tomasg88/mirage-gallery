@@ -1,14 +1,14 @@
-import Header from '@/components/Header/Header';
-import Footer from '@/components/Footer/Footer';
+import Header from 'components/Header/Header';
+import Footer from 'components/Footer/Footer';
 import Head from 'next/head';
 import { useRouter } from 'next/router';
-import { OffCanvas } from '../OffCanvas/OffCanvas';
+import { OffCanvas } from 'components/OffCanvas/OffCanvas';
 
 export const Layout = ({ children }: { children: React.ReactNode }) => {
   const router = useRouter();
   const meta = {
     title: 'Mirage Gallery',
-    description: `Evolving NFTs from Mirage Gallery.`,
+    description: 'Evolving NFTs from Mirage Gallery.',
     image:
       'https://res.cloudinary.com/srcouto/image/upload/v1655501065/miragegallery/ogimage_zirbxs.png',
     type: 'website',
@@ -18,48 +18,48 @@ export const Layout = ({ children }: { children: React.ReactNode }) => {
       <div id="top" />
       <Head>
         <title>{meta.title}</title>
-        <meta name="robots" content="follow, index" />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta content="follow, index" name="robots" />
+        <meta content="width=device-width, initial-scale=1" name="viewport" />
         <meta content={meta.description} name="description" />
         <meta
-          property="og:url"
           content={`https://miragegallery.com/${router.asPath}`}
+          property="og:url"
         />
         <link
-          rel="canonical"
           href={`https://miragegallery.com/${router.asPath}`}
+          rel="canonical"
         />
-        <meta property="og:type" content={meta.type} />
-        <meta property="og:site_name" content="miragegallery" />
-        <meta property="og:description" content={meta.description} />
-        <meta property="og:title" content={meta.title} />
-        <meta property="og:image" content={meta.image} />
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:site" content="@miragegallery" />
-        <meta name="twitter:title" content={meta.title} />
-        <meta name="twitter:description" content={meta.description} />
-        <meta name="twitter:image" content={meta.image} />
+        <meta content={meta.type} property="og:type" />
+        <meta content="miragegallery" property="og:site_name" />
+        <meta content={meta.description} property="og:description" />
+        <meta content={meta.title} property="og:title" />
+        <meta content={meta.image} property="og:image" />
+        <meta content="summary_large_image" name="twitter:card" />
+        <meta content="@miragegallery" name="twitter:site" />
+        <meta content={meta.title} name="twitter:title" />
+        <meta content={meta.description} name="twitter:description" />
+        <meta content={meta.image} name="twitter:image" />
         <link
+          href="/apple-touch-icon.png"
           rel="apple-touch-icon"
           sizes="180x180"
-          href="/apple-touch-icon.png"
         />
         <link
-          rel="icon"
-          type="image/png"
-          sizes="32x32"
           href="/favicon-32x32.png"
+          rel="icon"
+          sizes="32x32"
+          type="image/png"
         />
         <link
-          rel="icon"
-          type="image/png"
-          sizes="16x16"
           href="/favicon-16x16.png"
+          rel="icon"
+          sizes="16x16"
+          type="image/png"
         />
-        <link rel="manifest" href="/site.webmanifest" />
-        <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5" />
-        <meta name="msapplication-TileColor" content="#da532c" />
-        <meta name="theme-color" content="#1e2025" />
+        <link href="/site.webmanifest" rel="manifest" />
+        <link color="#5bbad5" href="/safari-pinned-tab.svg" rel="mask-icon" />
+        <meta content="#da532c" name="msapplication-TileColor" />
+        <meta content="#1e2025" name="theme-color" />
       </Head>
       <OffCanvas />
       <Header />

@@ -1,8 +1,8 @@
 import Link from 'next/link';
-import { MirageGalleryLogo } from '../Svgs/MirageGalleryLogo';
-import { ROUTES } from '@/utils/routes';
-import { DiscordSvg } from '../Svgs/DiscordSvg';
-import { TwitterSvg } from '../Svgs/TwitterSvg';
+import { MirageGalleryLogo } from 'components/Svgs/MirageGalleryLogo';
+import { ROUTES } from 'utils/routes';
+import { DiscordSvg } from 'components/Svgs/DiscordSvg';
+import { TwitterSvg } from 'components/Svgs/TwitterSvg';
 
 export default function Footer() {
   return (
@@ -13,11 +13,11 @@ export default function Footer() {
           {ROUTES.map((route) => {
             return (
               <Link
+                aria-label={route.ariaLabel}
+                className="text-xs font-normal text-gray-400 hover:text-[#920d3d] uppercase duration-100 cursor-pointer underline-offset-2 hover:underline"
                 href={route.path}
                 key={route.path}
                 title={route.ariaLabel}
-                className="text-xs font-normal text-gray-400 hover:text-[#920d3d] uppercase duration-100 cursor-pointer underline-offset-2 hover:underline"
-                aria-label={route.ariaLabel}
               >
                 {route.title}
               </Link>

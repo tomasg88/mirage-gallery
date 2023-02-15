@@ -1,6 +1,6 @@
 import Link from 'next/link';
 import React, { HTMLAttributes } from 'react';
-import { RightArrow } from '../../Svgs/RightArrow';
+import { RightArrow } from 'components/Svgs/RightArrow';
 
 type ButtonLinkProps = HTMLAttributes<HTMLButtonElement> & {
   href: string;
@@ -15,7 +15,7 @@ export const ButtonLink = ({
   showRightArrow,
 }: ButtonLinkProps) => {
   return (
-    <Link href={href} className={className}>
+    <Link className={className} href={href}>
       {text}
       {showRightArrow && <RightArrow className="ml-2" />}
     </Link>

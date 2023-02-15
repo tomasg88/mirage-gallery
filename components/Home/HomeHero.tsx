@@ -2,12 +2,11 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import Image from 'next/image';
 // Import Swiper styles
 import 'swiper/css';
-import { GALLERY } from '@/utils/gallery';
+import { GALLERY } from 'utils/gallery';
 import 'swiper/css/navigation';
 
-import { Pagination } from 'swiper';
 import { Navigation } from 'swiper';
-import { RightArrow } from '../Svgs/RightArrow';
+import { RightArrow } from 'components/Svgs/RightArrow';
 
 export default function HomeHero() {
   return (
@@ -17,18 +16,18 @@ export default function HomeHero() {
           A new generation of <span className="text-[#808080]">art.</span>
         </h1>
         <Swiper
-          spaceBetween={50}
-          centeredSlides={true}
-          slidesPerView={1}
-          loop={true}
-          navigation={true}
-          modules={[Navigation]}
           breakpoints={{
             640: {
               slidesPerView: 2,
               spaceBetween: 20,
             },
           }}
+          centeredSlides={true}
+          loop={true}
+          modules={[Navigation]}
+          navigation={true}
+          slidesPerView={1}
+          spaceBetween={50}
         >
           {GALLERY.map((i) => (
             <SwiperSlide key={i.id}>
@@ -36,13 +35,13 @@ export default function HomeHero() {
                 <div className="h-64 md:h-[500px] overflow-hidden w-full">
                   <Image
                     alt="alt"
-                    width={1200}
-                    height={900}
-                    quality={100}
-                    placeholder="blur"
-                    className="object-cover w-full"
                     blurDataURL={`/assets/blur-${i.img}`}
+                    className="object-cover w-full"
+                    height={900}
+                    placeholder="blur"
+                    quality={100}
                     src={`/assets/${i.img}`}
+                    width={1200}
                   />
                 </div>
                 <div className="flex justify-between w-full mt-12 slide-item-inview">

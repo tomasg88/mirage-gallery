@@ -1,4 +1,4 @@
-import { RightArrow } from '../Svgs/RightArrow';
+import { RightArrow } from 'components/Svgs/RightArrow';
 
 export default function CuratedHero() {
   return (
@@ -23,13 +23,13 @@ export default function CuratedHero() {
           </p>
           <div className="grid max-w-xl gap-3 sm:grid-cols-2">
             <input
-              type="text"
               className="p-3 text-gray-800 bg-gray-100"
               placeholder="Become a curated artist"
+              type="text"
             />
             <button
-              type="button"
               className="bg-[#920d3d] flex justify-center items-center text-white py-3"
+              type="button"
             >
               Mint
               <RightArrow className="ml-2" />

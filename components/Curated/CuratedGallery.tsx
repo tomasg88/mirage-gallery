@@ -1,8 +1,7 @@
-import Link from "next/link";
-import Image from "next/image";
-import styles from "./CuratedGallery.module.css";
-import OurDropsFilter from "@/components/Curated/OurDropsFilter";
-import { GALLERY } from "@/utils/gallery";
+import styles from './CuratedGallery.module.css';
+import OurDropsFilter from 'components/Curated/OurDropsFilter';
+import { GALLERY } from 'utils/gallery';
+import Image from 'next/image';
 
 export default function CuratedGallery() {
   return (
@@ -13,12 +12,12 @@ export default function CuratedGallery() {
           <div key={i.id}>
             <Image
               alt="alt"
-              width={1200}
-              height={900}
-              quality={100}
-              placeholder="blur"
               blurDataURL={`/assets/blur-${i.img}`}
+              height={900}
+              placeholder="blur"
+              quality={100}
               src={`/assets/${i.img}`}
+              width={1200}
             />
           </div>
         ))}

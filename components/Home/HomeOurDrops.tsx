@@ -1,7 +1,7 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import 'swiper/css';
-import { RightArrow } from '../Svgs/RightArrow';
+import { RightArrow } from 'components/Svgs/RightArrow';
 
 export default function HomeHero() {
   return (
@@ -10,22 +10,22 @@ export default function HomeHero() {
         <h2 className="my-6 text-2xl">Our drops</h2>
         <div className="grid gap-3 md:grid-cols-4">
           {DROPS.map((i) => (
-            <div key={i.id} className="relative group">
+            <div className="relative group" key={i.id}>
               <div className="overflow-hidden h-[512px] relative z-0">
                 <Image
                   alt="alt"
-                  width={1200}
-                  height={900}
-                  quality={100}
-                  placeholder="blur"
-                  className="object-cover h-[512px]"
                   blurDataURL={`/assets/blur-${i.img}`}
+                  className="object-cover h-[512px]"
+                  height={900}
+                  placeholder="blur"
+                  quality={100}
                   src={`/assets/${i.img}`}
+                  width={1200}
                 />
               </div>
               <Link
-                href={i.path}
                 className="absolute bottom-0 left-0 z-20 flex items-center justify-start p-6 text-2xl text-white hover:opacity-80"
+                href={i.path}
               >
                 {i.title}
                 <RightArrow className="ml-3" />
