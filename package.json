@@ -10,7 +10,7 @@
     "prepare": "husky install"
   },
   "lint-staged": {
-    "*.{ts,tsx,js,jsx,json}": ["eslint . --fix"]
+    "*.{ts,tsx,js,jsx,json}": ["eslint --fix"]
   },
   "dependencies": {
     "@fontsource/unbounded": "^4.5.1",
