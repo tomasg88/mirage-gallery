@@ -1,6 +1,6 @@
 import Link from 'next/link';
 import styles from './OffCanvasNavigation.module.css';
-import { ROUTES } from '@/utils/routes';
+import { ROUTES } from 'utils/routes';
 
 type OffCanvasNavigationProps = {
   closeMenu: () => void;

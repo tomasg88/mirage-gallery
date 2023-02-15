@@ -1,5 +1,5 @@
-import CuratedGallery from '@/components/Curated/CuratedGallery';
-import CuratedHero from '@/components/Curated/CuratedHero';
+import CuratedGallery from 'components/Curated/CuratedGallery';
+import CuratedHero from 'components/Curated/CuratedHero';
 
 export default function CuratedPage() {
   return (
