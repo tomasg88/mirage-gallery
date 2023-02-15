@@ -1,4 +1,4 @@
-import { OpenSeaLogo } from '../Svgs/OpenSeaLogo';
+import { OpenSeaLogo } from 'components/Svgs/OpenSeaLogo';
 
 export default function DreamersHero() {
   return (

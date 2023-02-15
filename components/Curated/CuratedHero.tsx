@@ -1,4 +1,4 @@
-import { RightArrow } from '../Svgs/RightArrow';
+import { RightArrow } from 'components/Svgs/RightArrow';
 
 export default function CuratedHero() {
   return (

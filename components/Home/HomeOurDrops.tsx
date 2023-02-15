@@ -1,7 +1,7 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import 'swiper/css';
-import { RightArrow } from '../Svgs/RightArrow';
+import { RightArrow } from 'components/Svgs/RightArrow';
 
 export default function HomeHero() {
   return (

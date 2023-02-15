@@ -1,8 +1,8 @@
 import Link from 'next/link';
-import { MirageGalleryLogo } from '../Svgs/MirageGalleryLogo';
-import { ROUTES } from '@/utils/routes';
-import { DiscordSvg } from '../Svgs/DiscordSvg';
-import { TwitterSvg } from '../Svgs/TwitterSvg';
+import { MirageGalleryLogo } from 'components/Svgs/MirageGalleryLogo';
+import { ROUTES } from 'utils/routes';
+import { DiscordSvg } from 'components/Svgs/DiscordSvg';
+import { TwitterSvg } from 'components/Svgs/TwitterSvg';
 
 export default function Footer() {
   return (

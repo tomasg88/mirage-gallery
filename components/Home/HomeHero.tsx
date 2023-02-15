@@ -2,11 +2,11 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import Image from 'next/image';
 // Import Swiper styles
 import 'swiper/css';
-import { GALLERY } from '@/utils/gallery';
+import { GALLERY } from 'utils/gallery';
 import 'swiper/css/navigation';
 
 import { Navigation } from 'swiper';
-import { RightArrow } from '../Svgs/RightArrow';
+import { RightArrow } from 'components/Svgs/RightArrow';
 
 export default function HomeHero() {
   return (

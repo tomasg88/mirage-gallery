@@ -1,8 +1,8 @@
-import Header from '@/components/Header/Header';
-import Footer from '@/components/Footer/Footer';
+import Header from 'components/Header/Header';
+import Footer from 'components/Footer/Footer';
 import Head from 'next/head';
 import { useRouter } from 'next/router';
-import { OffCanvas } from '../OffCanvas/OffCanvas';
+import { OffCanvas } from 'components/OffCanvas/OffCanvas';
 
 export const Layout = ({ children }: { children: React.ReactNode }) => {
   const router = useRouter();

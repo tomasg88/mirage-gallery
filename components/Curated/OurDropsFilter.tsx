@@ -1,5 +1,5 @@
-import { FilterButton } from '../Button/FilterButton/FilterButton';
-import { OpenSeaLogo } from '../Svgs/OpenSeaLogo';
+import { FilterButton } from 'components/Button/FilterButton/FilterButton';
+import { OpenSeaLogo } from 'components/Svgs/OpenSeaLogo';
 
 export default function OurDropsFilter() {
   return (
