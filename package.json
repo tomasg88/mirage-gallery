@@ -9,6 +9,9 @@
     "lint": "next lint",
     "prepare": "husky install"
   },
+  "lint-staged": {
+    "*.{ts,tsx,js,jsx}": ["eslint . --fix", "prettier --write ."]
+  },
   "dependencies": {
     "@fontsource/unbounded": "^4.5.1",
     "@next/font": "13.1.6",
