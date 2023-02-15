@@ -9,7 +9,7 @@ export const WalletSvg = ({ className }: WalletSvgProps) => {
       width="18"
       height="18"
       fill="none"
-      className="mr-2"
+      className={className}
     >
       <path
         stroke="#fff"
