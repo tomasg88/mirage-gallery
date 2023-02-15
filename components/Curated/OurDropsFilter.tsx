@@ -1,3 +1,4 @@
+import { FilterButton } from '../Button/FilterButton/FilterButton';
 import { OpenSeaLogo } from '../Svgs/OpenSeaLogo';
 
 export default function OurDropsFilter() {
@@ -5,22 +6,16 @@ export default function OurDropsFilter() {
     <div className="grid w-full mx-auto my-3 md:grid-cols-2 max-w-screen-2xl">
       <h2 className="text-2xl text-left">Our Drops</h2>
       <div className="flex items-center justify-end gap-3">
-        <button type="button" className="btn">
-          All
-        </button>
-        <button type="button" className="btn">
-          Minting
-        </button>
-        <button type="button" className="btn">
-          Sold Out
-        </button>
+        <FilterButton>All</FilterButton>
+        <FilterButton>Minting</FilterButton>
+        <FilterButton>Sold Out</FilterButton>
         <div className="h-full border-r border-gray-300" />
-        <button type="button" className="btn">
+        <FilterButton>
           <div>
             <OpenSeaLogo className={'w-4 mr-2'} />
           </div>
           View on Opensea
-        </button>
+        </FilterButton>
       </div>
     </div>
   );
