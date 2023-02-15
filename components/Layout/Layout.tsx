@@ -1,16 +1,17 @@
-import Header from "@/components/Header/Header";
-import Footer from "@/components/Footer/Footer";
-import Head from "next/head";
-import { useRouter } from "next/router";
-import Offcanvas from '../Offcanvas/Offcanvas';
-export default function Layout({ children }: any) {
+import Header from '@/components/Header/Header';
+import Footer from '@/components/Footer/Footer';
+import Head from 'next/head';
+import { useRouter } from 'next/router';
+import { OffCanvas } from '../OffCanvas/OffCanvas';
+
+export const Layout = ({ children }: { children: React.ReactNode }) => {
   const router = useRouter();
   const meta = {
-    title: "Mirage Gallery",
+    title: 'Mirage Gallery',
     description: `Evolving NFTs from Mirage Gallery.`,
     image:
-      "https://res.cloudinary.com/srcouto/image/upload/v1655501065/miragegallery/ogimage_zirbxs.png",
-    type: "website",
+      'https://res.cloudinary.com/srcouto/image/upload/v1655501065/miragegallery/ogimage_zirbxs.png',
+    type: 'website',
   };
   return (
     <>
@@ -60,12 +61,12 @@ export default function Layout({ children }: any) {
         <meta name="msapplication-TileColor" content="#da532c" />
         <meta name="theme-color" content="#1e2025" />
       </Head>
-      <Offcanvas />
+      <OffCanvas />
       <Header />
       <main className="flex flex-col items-center justify-start w-full text-gray-900 min-h-[calc(100vh-6rem)] overflow-x-hidden pt-24 bg-white">
         {children}
       </main>
-      <Footer/>
+      <Footer />
     </>
   );
-}
+};

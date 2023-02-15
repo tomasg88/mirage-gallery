@@ -1,8 +1,14 @@
-import Link from "next/link";
-import styles from "./OffcanvasNavigation.module.css";
-import { ROUTES } from "@/utils/routes";
+import Link from 'next/link';
+import styles from './OffCanvasNavigation.module.css';
+import { ROUTES } from '@/utils/routes';
 
-const Navigation = ({ closeMenu }: any) => (
+type OffCanvasNavigationProps = {
+  closeMenu: () => void;
+};
+
+export const OffCanvasNavigation = ({
+  closeMenu,
+}: OffCanvasNavigationProps) => (
   <nav className={styles.root}>
     {ROUTES.map((route) => {
       return (
@@ -20,5 +26,3 @@ const Navigation = ({ closeMenu }: any) => (
     })}
   </nav>
 );
-
-export default Navigation;
