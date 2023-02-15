@@ -1,8 +1,10 @@
 import HomeHero from '@/components/Home/HomeHero';
 import HomeCuratedImages from '@/components/Home/HomeCuratedImages';
 import HomeOurDrops from '@/components/Home/HomeOurDrops';
-import HeroTitle from '@/components/ui/HeroTitle';
+import HeroTitle from '@/components/HeroTitle/HeroTitle';
 import Link from 'next/link';
+import { RightArrow } from '@/components/Svgs/RightArrow';
+import { ButtonLink } from '@/components/Button/ButtonLink/ButtonLink';
 
 export default function Home() {
   return (
@@ -50,26 +52,12 @@ export default function Home() {
             <HomeCuratedImages />
           </div>
           <div className="flex items-center justify-start mt-6">
-            <Link
-              href="/crypto-native"
+            <ButtonLink
               className="bg-[#431281] flex px-6 py-4 items-center justify-center text-white"
-            >
-              Explore crypto native
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                className="ml-2"
-                width="14"
-                height="10"
-                fill="none"
-              >
-                <path
-                  stroke="#fff"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  d="M12.833 5H1.167M8.667 9.167 12.833 5M8.667.833 12.833 5"
-                />
-              </svg>
-            </Link>
+              href="/crypto-native"
+              showRightArrow
+              text="Explore crypto native"
+            />
           </div>
         </section>
         <section>
@@ -90,26 +78,12 @@ export default function Home() {
             <HomeCuratedImages />
           </div>
           <div className="flex items-center justify-start mt-6">
-            <Link
-              href="/curated"
+            <ButtonLink
               className="bg-[#920d3d] flex px-6 py-4 items-center justify-center text-white"
-            >
-              Explore curated
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                className="ml-2"
-                width="14"
-                height="10"
-                fill="none"
-              >
-                <path
-                  stroke="#fff"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  d="M12.833 5H1.167M8.667 9.167 12.833 5M8.667.833 12.833 5"
-                />
-              </svg>
-            </Link>
+              href="/curated"
+              showRightArrow
+              text="Explore curated"
+            />
           </div>
         </section>
         <section>
@@ -127,26 +101,12 @@ export default function Home() {
             <HomeCuratedImages />
           </div>
           <div className="flex items-center justify-start mt-6">
-            <Link
-              href="/dreamers"
+            <ButtonLink
               className="bg-[#1129aa] flex px-6 py-4 items-center justify-center text-white"
-            >
-              Explore dreamers
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                className="ml-2"
-                width="14"
-                height="10"
-                fill="none"
-              >
-                <path
-                  stroke="#fff"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  d="M12.833 5H1.167M8.667 9.167 12.833 5M8.667.833 12.833 5"
-                />
-              </svg>
-            </Link>
+              href="/dreamers"
+              text="Explore dreamers"
+              showRightArrow
+            />
           </div>
         </section>
         <section>
@@ -171,20 +131,7 @@ export default function Home() {
               className="bg-[#e2b310] flex px-6 py-4 items-center justify-center"
             >
               Explore memberships
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                className="ml-2"
-                width="14"
-                height="10"
-                fill="none"
-              >
-                <path
-                  stroke="#000"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  d="M12.833 5H1.167M8.667 9.167 12.833 5M8.667.833 12.833 5"
-                />
-              </svg>
+              <RightArrow className="ml-2" stroke={'#000'} />
             </Link>
           </div>
         </section>

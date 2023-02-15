@@ -1,13 +1,13 @@
-import React, { useState, useCallback } from "react";
-import { slide as Menu } from "react-burger-menu";
-import Navigation from "./OffcanvasNavigation";
-import ConnectWalletButton from "@/components/ConnectWalletButton/ConnectWalletButton";
+import React, { useState, useCallback } from 'react';
+import { slide as Menu } from 'react-burger-menu';
+import Navigation from './OffcanvasNavigation';
+import ConnectWalletButton from '@/components/Button/ConnectWalletButton/ConnectWalletButton';
 export default function Offcanvas() {
   const [openMenu, setOpenMenu] = useState(false);
 
   const closeMenu = useCallback(() => setOpenMenu(false), []);
   const handleStateChange = useCallback(
-    (state : any) => {
+    (state: any) => {
       setOpenMenu(state.isOpen);
     },
     [setOpenMenu]

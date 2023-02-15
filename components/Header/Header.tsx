@@ -1,13 +1,13 @@
-import Link from "next/link";
-import { ROUTES } from "@/utils/routes";
-import Logo from "../Logo";
-import ConnectWalletButton from "@/components/ConnectWalletButton/ConnectWalletButton";
+import Link from 'next/link';
+import { ROUTES } from '@/utils/routes';
+import { MirageGalleryLogo } from '../Svgs/MirageGalleryLogo';
+import ConnectWalletButton from '@/components/Button/ConnectWalletButton/ConnectWalletButton';
 export default function Header() {
   return (
     <header className="fixed top-0 left-0 right-0 z-50 px-2 py-6 bg-white border-b border-gray-200">
       <div className="flex items-center justify-start w-full mx-auto space-x-6 sm:space-x-8 max-w-screen-2xl">
         <Link href="/" className="text-gray-900">
-          <Logo />
+          <MirageGalleryLogo />
           <span className="sr-only">Mirage Gallery</span>
         </Link>
         <nav className="items-center justify-start hidden pl-6 space-x-6 border-l border-gray-200 xl:flex">
@@ -25,7 +25,7 @@ export default function Header() {
             );
           })}
         </nav>
-        <div style={{ flex: "1" }} />
+        <div style={{ flex: '1' }} />
         <div className="absolute bottom-0 hidden right-32 xl:flex xl:right-0 xl:relative">
           <ConnectWalletButton />
         </div>
