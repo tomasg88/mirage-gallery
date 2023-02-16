@@ -17,7 +17,7 @@ export default function CuratedHero() {
             Innovative AI artwork,{' '}
             <span className="text-[#920d3d]">from a variety of artists.</span>
           </h1>
-          <p className="py-4">
+          <p className="py-4 font-sans">
             Mirage Gallery was founded on the premise that art can be more than
             human.
           </p>

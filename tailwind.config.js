@@ -7,6 +7,7 @@ module.exports = {
   theme: {
     fontFamily: {
       base: ['Unbounded', 'mono'],
+      sans: ['var(--font-mona-sans)'],
     },
     extend: {},
   },
