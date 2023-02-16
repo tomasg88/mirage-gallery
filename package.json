@@ -10,21 +10,29 @@
     "prepare": "husky install"
   },
   "lint-staged": {
-    "*.{ts,tsx,js,jsx,json}": ["eslint --fix"]
+    "*.{ts,tsx,js,jsx,json}": [
+      "eslint --fix"
+    ]
   },
   "dependencies": {
     "@fontsource/unbounded": "^4.5.1",
     "@next/font": "13.1.6",
+    "@sanity/icons": "^2",
+    "@sanity/types": "^3",
+    "@sanity/ui": "^1",
     "@types/node": "18.13.0",
     "@types/react": "18.0.28",
     "@types/react-burger-menu": "^2.8.3",
     "@types/react-dom": "18.0.10",
     "eslint": "8.34.0",
     "eslint-config-next": "13.1.6",
-    "next": "13.1.6",
-    "react": "18.2.0",
+    "next": "^13",
+    "next-sanity": "4.1.5",
+    "react": "^18",
     "react-burger-menu": "^3.0.9",
     "react-dom": "18.2.0",
+    "sanity": "^3",
+    "styled-components": "^5.2",
     "swiper": "^9.0.5",
     "typescript": "4.9.5"
   },
