@@ -13,7 +13,7 @@ import type { AppProps } from 'next/app';
 const mona_sans = localFont({
   src: './Mona-Sans.woff2',
   variable: '--font-mona-sans',
-  weight: '400 500',
+  weight: '400, 500',
   display: 'swap',
 });
 
