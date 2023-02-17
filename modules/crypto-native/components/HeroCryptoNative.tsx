@@ -1,14 +1,16 @@
+import Image from 'next/image';
 import { OpenSeaLogo } from 'components/Svgs/OpenSeaLogo';
 import { RightArrow } from 'components/Svgs/RightArrow';
 
 export default function HeroCryptoNative() {
   return (
     <div className="w-full pb-64">
-      {/* eslint-disable-next-line @next/next/no-img-element */}
-      <img
-        alt="golis"
-        className="absolute top-0 right-0 z-0 animate__animated animate__slower animate__fadeIn"
+      <Image
+        alt="imagen"
+        className="absolute top-0 right-0 z-0 animate__animated animate__slower animate__fadeIn w-1/2"
+        height={600}
         src="/assets/back-crypto-native.jpg"
+        width={1600}
       />
       <div className="relative z-10 grid w-full grid-cols-2 gap-6 px-6 mx-auto max-w-screen-2xl">
         <div className="grid w-full mt-16">
