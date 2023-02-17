@@ -1,6 +1,6 @@
 import { HeroTitle } from 'components/HeroTitle/HeroTitle';
 
-export default function CryptoNativeTokenDistribution() {
+export default function TokenDistribution() {
   return (
     <div className="relative py-24">
       <HeroTitle accentColor={'text-[#431281]'} subtitle="Token distribution">
