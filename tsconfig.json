@@ -17,6 +17,7 @@
     "baseUrl": ".",
     "paths": {
       "components": ["./components"],
+      "modules": ["./modules"],
       "pages": ["./pages"],
       "styles": ["./styles"],
       "utils": ["./utils"],
