@@ -1,7 +1,7 @@
-import styles from './CuratedGallery.module.css';
-import OurDropsFilter from 'components/Curated/OurDropsFilter';
-import { GALLERY } from 'utils/gallery';
 import Image from 'next/image';
+import { GALLERY } from 'utils/gallery';
+import styles from 'modules/curated/styles/CuratedGallery.module.css';
+import OurDropsFilter from './OurDropsFilter';
 
 export default function CuratedGallery() {
   return (

@@ -3,7 +3,7 @@ import { RightArrow } from 'components/Svgs/RightArrow';
 export default function CuratedHero() {
   return (
     <div
-      className="w-full pb-32 mb-24 bg-no-repeat "
+      className="w-full pb-32 mb-24 bg-no-repeat"
       style={{
         backgroundImage: "url('/assets/curated-back.jpg')",
         backgroundSize: '50vw',

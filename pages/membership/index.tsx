@@ -1,8 +1,8 @@
-import MembershipBenefits from 'components/Membership/Benefits';
-import HeroMembership from 'components/Membership/HeroMembership';
-import MembersSays from 'components/Membership/MembersSays';
-import Tiers from 'components/Membership/Tiers';
-import ViewOrClaim from 'components/Membership/ViewOrClaim';
+import MembershipBenefits from 'modules/membership/components/Benefits';
+import HeroMembership from 'modules/membership/components/HeroMembership';
+import MembersSays from 'modules/membership/components/MembersSays';
+import Tiers from 'modules/membership/components/Tiers';
+import ViewOrClaim from 'modules/membership/components/ViewOrClaim';
 
 export default function MembershipPage() {
   return (
