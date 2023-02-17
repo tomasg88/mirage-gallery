@@ -7,10 +7,10 @@ export default function CryptoNativeTokenDistribution() {
         How we distribute the tokens
       </HeroTitle>
       <div className="grid gap-6 md:grid-cols-4">
-        {TOKENS.map((i) => (
-          <div className="" key={i.id}>
-            <h4 className="text-[#431281] my-3 text-sm">{i.title}</h4>
-            <p className="font-sans text-base">{i.description}</p>
+        {TOKENS.map((token) => (
+          <div className="" key={token.id}>
+            <h4 className="text-[#431281] my-3 text-sm">{token.title}</h4>
+            <p className="font-sans text-base">{token.description}</p>
           </div>
         ))}
       </div>
