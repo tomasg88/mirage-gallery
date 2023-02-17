@@ -1,6 +1,7 @@
-import AlejandroHero from '@/components/AlejandroTaylor/AlejandroHero';
+import AlejandroHero from 'modules/alejandro-and-taylor/components/AlejandroHero';
 import Image from 'next/image';
 import Link from 'next/link';
+
 export default function AlejandroPage() {
   return (
     <div className="w-full pb-24">
