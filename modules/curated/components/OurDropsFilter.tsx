@@ -1,5 +1,5 @@
-import { FilterButton } from 'components/Button/FilterButton/FilterButton';
 import { OpenSeaLogo } from 'components/Svgs/OpenSeaLogo';
+import { FilterButton } from 'components/Button/FilterButton/FilterButton';
 
 export default function OurDropsFilter() {
   return (
@@ -12,7 +12,7 @@ export default function OurDropsFilter() {
         <div className="h-full border-r border-gray-300" />
         <FilterButton>
           <div>
-            <OpenSeaLogo className={'w-4 mr-2'} />
+            <OpenSeaLogo className="mr-2" />
           </div>
           View on Opensea
         </FilterButton>

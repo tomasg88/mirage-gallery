@@ -2,7 +2,7 @@ import Link from 'next/link';
 import { MirageGalleryLogo } from 'components/Svgs/MirageGalleryLogo';
 import { ROUTES } from 'utils/routes';
 import { DiscordSvg } from 'components/Svgs/DiscordSvg';
-import { TwitterSvg } from 'components/Svgs/TwitterSvg';
+import { TwitterColor, TwitterSvg } from 'components/Svgs/TwitterSvg';
 
 export default function Footer() {
   return (
@@ -33,7 +33,7 @@ export default function Footer() {
             <DiscordSvg />
           </div>
           <div>
-            <TwitterSvg />
+            <TwitterSvg fillColor={TwitterColor.BLACK} />
           </div>
         </div>
       </div>

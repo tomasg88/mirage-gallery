@@ -16,6 +16,7 @@
   },
   "dependencies": {
     "@fontsource/unbounded": "^4.5.1",
+    "@headlessui/react": "^1.7.11",
     "@next/font": "13.1.6",
     "@sanity/icons": "^2",
     "@sanity/types": "^3",
@@ -24,6 +25,7 @@
     "@types/react": "18.0.28",
     "@types/react-burger-menu": "^2.8.3",
     "@types/react-dom": "18.0.10",
+    "@types/video-react": "^0.15.1",
     "eslint": "8.34.0",
     "eslint-config-next": "13.1.6",
     "next": "^13",
@@ -34,7 +36,8 @@
     "sanity": "^3",
     "styled-components": "^5.2",
     "swiper": "^9.0.5",
-    "typescript": "4.9.5"
+    "typescript": "4.9.5",
+    "video-react": "^0.16.0"
   },
   "devDependencies": {
     "@typescript-eslint/eslint-plugin": "^5.52.0",

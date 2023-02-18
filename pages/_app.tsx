@@ -1,6 +1,7 @@
 import { Layout } from 'components/Layout/Layout';
 import 'styles/globals.css';
 import 'styles/offcanvas.css';
+import 'styles/Video.css';
 import '@fontsource/unbounded';
 import '@fontsource/unbounded/300.css';
 import '@fontsource/unbounded/500.css';

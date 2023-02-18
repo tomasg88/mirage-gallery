@@ -3,9 +3,9 @@ import { RightArrow } from 'components/Svgs/RightArrow';
 export default function CuratedHero() {
   return (
     <div
-      className="w-full pb-32 mb-24 bg-no-repeat"
+      className="w-full pt-32 pb-32 mb-24 bg-no-repeat md:pt-0 "
       style={{
-        backgroundImage: "url('/assets/curated-back.jpg')",
+        backgroundImage: "url('/assets/back-curated.jpg')",
         backgroundSize: '50vw',
         backgroundPosition: 'top right',
       }}
@@ -22,11 +22,12 @@ export default function CuratedHero() {
             human.
           </p>
           <div className="grid max-w-xl gap-3 sm:grid-cols-2">
-            <input
-              className="p-3 text-gray-800 bg-gray-100"
-              placeholder="Become a curated artist"
-              type="text"
-            />
+            <a
+              className="p-3 text-center text-gray-800 bg-gray-100"
+              href="#become-curated-artist"
+            >
+              Become a curated artist
+            </a>
             <button
               className="bg-[#920d3d] flex justify-center items-center text-white py-3"
               type="button"
