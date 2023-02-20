@@ -7,7 +7,7 @@ export default function DreamersCollectionBetterWorldHero() {
       <div className="w-full h-[500px]">
         <Image
           alt="imagen"
-          className="object-cover w-full h-[500px]"
+          className="object-cover w-full h-full"
           height={600}
           src="/assets/back-dreaming-a-better-world.jpg"
           width={1600}
