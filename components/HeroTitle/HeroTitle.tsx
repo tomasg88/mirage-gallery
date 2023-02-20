@@ -1,15 +1,15 @@
 import styles from './HeroTitle.module.css';
 
 type HeroTitleProps = {
-  accentColor: string;
+  accentColor?: string;
   children: React.ReactNode;
-  subtitle: string;
+  subtitle?: string;
 };
 
 export const HeroTitle = ({
   subtitle,
   children,
-  accentColor,
+  accentColor = '', // init with white space to prevent wrong values in html classes
 }: HeroTitleProps) => {
   return (
     <div

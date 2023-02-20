@@ -3,9 +3,9 @@ import { OpenSeaLogo } from 'components/Svgs/OpenSeaLogo';
 export default function DreamersHero() {
   return (
     <div
-      className="w-full min-h-screen bg-no-repeat "
+      className="w-full pb-64 bg-no-repeat "
       style={{
-        backgroundImage: "url('/assets/dreamers-back.jpg')",
+        backgroundImage: "url('/assets/back-dreamers.jpg')",
         backgroundSize: '50vw',
         backgroundPosition: 'top right',
       }}
@@ -20,12 +20,12 @@ export default function DreamersHero() {
             Mirage Gallery was founded on the premise that art can be more than
             human.
           </p>
-          <div className="grid max-w-xl grid-cols-2 gap-3">
+          <div className="flex justify-start">
             <button
-              className="flex items-center justify-center py-3 text-black duration-300 bg-gray-200 hover:bg-gray-100"
+              className="flex items-center justify-center py-3 text-black duration-300 bg-gray-200 px-9 hover:bg-gray-100"
               type="button"
             >
-              <OpenSeaLogo className={'mr-2'} />
+              <OpenSeaLogo className="mr-2" />
               View on Opensea
             </button>
           </div>
