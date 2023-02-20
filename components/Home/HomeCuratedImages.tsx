@@ -6,16 +6,16 @@ import 'swiper/css/navigation';
 export default function HomeHero() {
   return (
     <div className="grid h-64 grid-cols-10 my-6 overflow-hidden">
-      {GALLERY.map((i) => (
-        <div className="w-full h-64 overflow-hidden" key={i.title}>
+      {GALLERY.map((img) => (
+        <div className="w-full h-64 overflow-hidden" key={img.id}>
           <Image
             alt="alt"
-            blurDataURL={`/assets/blur-${i.img}`}
+            blurDataURL={`/assets/blur-${img.img}`}
             className="object-cover w-full h-64"
             height={900}
             placeholder="blur"
             quality={100}
-            src={`/assets/${i.img}`}
+            src={`/assets/${img.img}`}
             width={1200}
           />
         </div>

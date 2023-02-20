@@ -33,8 +33,8 @@ export default function AlejandroPage() {
           </div>
         </div>
         <div className="grid grid-cols-2 gap-6 md:grid-cols-4 gap-y-20">
-          {[...TOKENS, ...TOKENS, ...TOKENS, ...TOKENS].map((token) => (
-            <div className="" key={token.id}>
+          {[...TOKENS, ...TOKENS, ...TOKENS, ...TOKENS].map((token, index) => (
+            <div className="" key={`${token.id}-${index}`}>
               <Image
                 alt="alt"
                 height={900}
