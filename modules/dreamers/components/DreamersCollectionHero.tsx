@@ -8,7 +8,7 @@ export default function DreamersCollectionHero() {
       <div className="w-full h-[500px]">
         <Image
           alt="imagen"
-          className="object-cover w-full h-[500px]"
+          className="object-cover w-full h-full"
           height={600}
           src="/assets/back-8000-dreamers.jpg"
           width={1600}
