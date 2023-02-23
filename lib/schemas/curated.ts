@@ -18,6 +18,12 @@ export const curated = defineType({
       type: 'string',
     }),
     defineField({
+      name: 'slug',
+      options: { source: 'name' },
+      title: 'Slug',
+      type: 'slug',
+    }),
+    defineField({
       description: 'This description will be displayed in the website',
       name: 'description',
       title: 'Drop Description',
@@ -25,9 +31,9 @@ export const curated = defineType({
     }),
     defineField({
       description: 'Details of our curated artist',
-      name: 'artist',
-      title: 'Artist',
-      type: 'curatedArtist',
+      name: 'artists',
+      of: [{ type: 'curatedArtist' }],
+      type: 'array',
     }),
     defineField({
       description: 'Details of the project',
@@ -62,9 +68,9 @@ export const curated = defineType({
         direction: 'horizontal',
         layout: 'radio',
         list: [
-          { value: 'soldOut', title: 'Sold Out' },
+          { value: 'sold-out', title: 'Sold Out' },
           { value: 'minting', title: 'Minting' },
-          { value: 'notStarted', title: 'Not Started' },
+          { value: 'upcoming', title: 'Upcoming' },
         ],
       },
       title: 'Status',
