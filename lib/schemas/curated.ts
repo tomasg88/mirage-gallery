@@ -3,8 +3,14 @@ import { defineField, defineType } from 'sanity';
 export const curated = defineType({
   fieldsets: [
     {
+      description: 'Details of the drop that is about to be published',
+      name: 'drop-details',
+      title: 'Drop Details',
+      options: { collapsed: true, collapsible: true },
+    },
+    {
       description:
-        'Information about the drop and minting to be shown on the website',
+        'Minting information about this drop to be shown on the website',
       name: 'mint-details',
       title: 'Minting Details',
       options: { collapsed: true, collapsible: true },
@@ -13,11 +19,13 @@ export const curated = defineType({
   fields: [
     defineField({
       description: 'Name of the drop to be displayed in the website',
+      fieldset: 'drop-details',
       name: 'name',
-      title: 'Drop Name',
+      title: 'Name',
       type: 'string',
     }),
     defineField({
+      fieldset: 'drop-details',
       name: 'slug',
       options: { source: 'name' },
       title: 'Slug',
@@ -25,9 +33,16 @@ export const curated = defineType({
     }),
     defineField({
       description: 'This description will be displayed in the website',
+      fieldset: 'drop-details',
       name: 'description',
       title: 'Drop Description',
       type: 'string',
+    }),
+    defineField({
+      fieldset: 'drop-details',
+      name: 'video',
+      title: 'Drop Video',
+      type: 'cloudinary.asset',
     }),
     defineField({
       description: 'Details of our curated artist',
