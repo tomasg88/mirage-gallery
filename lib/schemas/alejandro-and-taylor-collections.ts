@@ -1,6 +1,8 @@
 import { defineField, defineType } from 'sanity';
 
-export const alejandro = defineType({
+export const alejandroAndTaylorCollections = defineType({
+  description:
+    'Each document represents a new collection from the Alejandro & Taylor project',
   fields: [
     defineField({
       name: 'collectionNumber',
@@ -19,7 +21,7 @@ export const alejandro = defineType({
       type: 'string',
     }),
   ],
-  name: 'alejandro',
-  title: 'Alejandro & Taylor',
+  name: 'alejandro-and-taylor-collections',
+  title: 'Alejandro & Taylor Collections',
   type: 'document',
 });
