@@ -1,0 +1,68 @@
+.gallery {
+  @apply grid sm:grid-cols-4 max-w-screen-2xl w-full  mx-auto gap-9;
+}
+
+.gallery div {
+  @apply w-full h-full overflow-hidden;
+}
+
+.gallery div img {
+  @apply object-cover w-full h-[110%] object-top;
+}
+
+.gallery div:nth-child(1) {
+  @apply sm:col-span-2 h-[280px];
+}
+
+.gallery div:nth-child(2) {
+  @apply sm:col-span-2 h-[280px];
+}
+
+.gallery div:nth-child(3) {
+}
+
+.gallery div:nth-child(4) {
+  @apply sm:col-span-3 h-72;
+}
+
+.gallery div:nth-child(5) {
+  @apply row-span-2;
+}
+
+.gallery div:nth-child(6) {
+  @apply row-span-2;
+}
+
+.gallery div:nth-child(7) {
+  @apply row-span-2 sm:col-span-2;
+}
+
+.gallery div:nth-child(8) {
+  @apply sm:col-span-2;
+}
+
+.gallery div:nth-child(9) {
+}
+
+.gallery div:nth-child(10) {
+}
+
+.gallery div:nth-child(11) {
+  @apply sm:col-span-4 h-[560px];
+}
+
+.gallery div:nth-child(12) {
+  @apply sm:col-span-3  h-[280px];
+}
+
+.gallery div:nth-child(13) {
+  @apply w-full min-h-[280px];
+}
+
+.gallery div:nth-child(14) {
+  @apply sm:col-span-4 h-[560px];
+}
+
+.gallery div:nth-child(14) img {
+  @apply object-center;
+}
