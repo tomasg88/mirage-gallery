@@ -1,8 +1,6 @@
 import { defineField, defineType } from 'sanity';
 
 export const alejandroAndTaylorCollections = defineType({
-  description:
-    'Each document represents a new collection from the Alejandro & Taylor project',
   fields: [
     defineField({
       name: 'collectionNumber',
@@ -10,12 +8,14 @@ export const alejandroAndTaylorCollections = defineType({
       type: 'string',
     }),
     defineField({
+      description: 'Some images from the new collection to show on the website',
       name: 'images',
       of: [{ type: 'collectionImage' }],
       title: 'Images',
       type: 'array',
     }),
     defineField({
+      description: 'Marketplace URL where users can find this collection',
       name: 'openSeaUrl',
       title: 'OpenSea Url',
       type: 'string',

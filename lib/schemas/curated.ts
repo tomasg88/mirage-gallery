@@ -3,6 +3,8 @@ import { defineField, defineType } from 'sanity';
 export const curated = defineType({
   fieldsets: [
     {
+      description:
+        'Information about the drop and minting to be shown on the website',
       name: 'mint-details',
       title: 'Minting Details',
       options: { collapsed: true, collapsible: true },
@@ -10,11 +12,13 @@ export const curated = defineType({
   ],
   fields: [
     defineField({
+      description: 'Name of the drop to be displayed in the website',
       name: 'name',
       title: 'Drop Name',
       type: 'string',
     }),
     defineField({
+      description: 'This description will be displayed in the website',
       name: 'description',
       title: 'Drop Description',
       type: 'string',
@@ -26,6 +30,7 @@ export const curated = defineType({
       type: 'curatedArtist',
     }),
     defineField({
+      description: 'Details of the project',
       name: 'project',
       title: 'Project',
       type: 'projectInfo',
