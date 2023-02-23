@@ -45,17 +45,7 @@ export const curated = defineType({
       name: 'sampleImages',
       of: [
         {
-          fields: [
-            {
-              name: 'alt',
-              title: 'Alt Text',
-              type: 'string',
-            },
-          ],
-          type: 'image',
-          options: {
-            hotspot: true,
-          },
+          type: 'cloudinary.asset',
         },
       ],
       title: 'Sample Images',

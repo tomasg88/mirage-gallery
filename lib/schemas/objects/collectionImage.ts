@@ -3,19 +3,9 @@ import { defineField, defineType } from 'sanity';
 export const collectionImage = defineType({
   fields: [
     defineField({
-      fields: [
-        {
-          name: 'alt',
-          title: 'Alt Text',
-          type: 'string',
-        },
-      ],
       name: 'image',
-      options: {
-        hotspot: true,
-      },
       title: 'Image',
-      type: 'image',
+      type: 'cloudinary.asset',
     }),
     defineField({
       name: 'name',
