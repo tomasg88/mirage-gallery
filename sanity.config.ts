@@ -10,7 +10,7 @@ import {
   cloudinarySchemaPlugin,
 } from 'sanity-plugin-cloudinary';
 
-export const config = defineConfig({
+const config = defineConfig({
   basePath: process.env.NEXT_PUBLIC_SANITY_BASE_PATH,
   dataset: process.env.NEXT_PUBLIC_SANITY_DATASET as string,
   form: {
@@ -35,3 +35,5 @@ export const config = defineConfig({
   },
   title: process.env.NEXT_PUBLIC_SANITY_TITLE,
 });
+
+export default config;
