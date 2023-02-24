@@ -20,7 +20,7 @@ export const curatedArtist = defineType({
     defineField({
       name: 'profilePicture',
       title: 'Profile Picture',
-      type: 'image',
+      type: 'cloudinary.asset',
     }),
   ],
   name: 'curatedArtist',
