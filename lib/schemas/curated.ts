@@ -58,11 +58,7 @@ export const curated = defineType({
     }),
     defineField({
       name: 'sampleImages',
-      of: [
-        {
-          type: 'cloudinary.asset',
-        },
-      ],
+      of: [{ type: 'cloudinary.asset' }],
       title: 'Sample Images',
       type: 'array',
     }),
