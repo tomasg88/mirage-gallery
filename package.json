@@ -21,6 +21,7 @@
     "@sanity/icons": "^2",
     "@sanity/types": "^3",
     "@sanity/ui": "^1",
+    "@sanity/vision": "3.0.0",
     "@types/node": "18.13.0",
     "@types/react": "18.0.28",
     "@types/react-burger-menu": "^2.8.3",
