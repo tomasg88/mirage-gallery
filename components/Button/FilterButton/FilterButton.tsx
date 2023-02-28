@@ -8,9 +8,14 @@ type FilterButtonProps = HTMLAttributes<HTMLButtonElement> & {
 export const FilterButton = ({
   children,
   className = '', // init with white space if nothing is passed
+  onClick,
 }: FilterButtonProps) => {
   return (
-    <button className={styles.root + ' ' + className} type="button">
+    <button
+      className={`${styles.root} ${className}`}
+      onClick={onClick}
+      type="button"
+    >
       {children}
     </button>
   );
