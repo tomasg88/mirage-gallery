@@ -9,6 +9,7 @@ import {
   cloudinaryImageSource,
   cloudinarySchemaPlugin,
 } from 'sanity-plugin-cloudinary';
+import { visionTool } from '@sanity/vision';
 
 export const config = defineConfig({
   basePath: process.env.NEXT_PUBLIC_SANITY_BASE_PATH,
@@ -20,7 +21,7 @@ export const config = defineConfig({
     },
   },
   // cloudinarySchemaPlugin: this plugin tells Sanity to use Cloudinary CDN
-  plugins: [deskTool(), cloudinarySchemaPlugin()],
+  plugins: [deskTool(), cloudinarySchemaPlugin(), visionTool()],
   projectId: process.env.NEXT_PUBLIC_SANITY_PROJECT_ID as string,
   schema: {
     types: [
