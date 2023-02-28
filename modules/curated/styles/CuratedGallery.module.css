@@ -3,7 +3,7 @@
 }
 
 .gallery div {
-  @apply w-full h-full overflow-hidden;
+  @apply w-full h-full overflow-hidden bg-gray-100;
 }
 
 .gallery div img {
