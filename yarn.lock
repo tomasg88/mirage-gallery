@@ -1130,7 +1130,7 @@
     lodash "^4.17.21"
     rxjs "^7.8.0"
 
-"@sanity/vision@^3.0.0":
+"@sanity/vision@3.0.0":
   version "3.0.0"
   resolved "https://registry.yarnpkg.com/@sanity/vision/-/vision-3.0.0.tgz#4fe306fc66d078c5f10b31cab451613cd337a70d"
   integrity sha512-Dr18Iugz2xHEavag4asOzYBIjwnj+5SEB7DlbyNow0mQ5fQWYh8eRES2OBDvrOLbBJ5rVuZMIzrcokQ+nzmrBw==
@@ -1971,6 +1971,11 @@ cliui@^8.0.1:
     string-width "^4.2.0"
     strip-ansi "^6.0.1"
     wrap-ansi "^7.0.0"
+
+clsx@^1.2.1:
+  version "1.2.1"
+  resolved "https://registry.yarnpkg.com/clsx/-/clsx-1.2.1.tgz#0ddc4a20a549b59c93a4116bb26f5294ca17dc12"
+  integrity sha512-EcR6r5a8bj6pu3ycsa/E/cKVGuTgZJZdsyUYHOksG/UHIiKfjxzRxYJpyVBwYaQeOvghal9fcc4PidlgzugAQg==
 
 codemirror@^6.0.0:
   version "6.0.1"
