@@ -1,54 +1,55 @@
 import { useCallback, useState } from 'react';
-import Image from 'next/image';
-import Link from 'next/link';
+
 import styles from 'modules/curated/styles/CuratedGallery.module.css';
 import DropsFilter from 'modules/curated/components/DropsFilter';
 import { Drop, MintStatus } from 'types/drops';
-import { CURATED_DROP_DETAILS } from 'utils/routes';
+import { DropCover } from './DropCover';
+import { DropCoverOverlay } from './DropCoverOverlay';
 
 type CuratedGalleryProps = {
   drops: Drop[];
 };
 
-export default function CuratedGallery({ drops }: CuratedGalleryProps) {
-  const [status, setStatus] = useState<MintStatus>(MintStatus.ALL);
+// Per design, we should only show a max of 15 drops
+const MAX_DROPS = 14;
+
+export const CuratedGallery = ({ drops }: CuratedGalleryProps) => {
+  const [selectedStatus, setSelectedStatus] = useState<MintStatus>(
+    MintStatus.ALL
+  );
+  const [hoveredDrop, setHoveredDrop] = useState<Drop['_id'] | null>(null);
 
   const filterDrops = useCallback(
     (drop: Drop) => {
-      if (status === MintStatus.ALL) {
+      if (selectedStatus === MintStatus.ALL) {
         return drop;
       }
-      return drop.status === status;
+      return drop.status === selectedStatus;
     },
-    [status]
+    [selectedStatus]
   );
 
   return (
     <div className="px-6">
-      <DropsFilter setFilter={setStatus} />
+      <DropsFilter setFilter={setSelectedStatus} />
       <div className={styles.gallery}>
-        {drops.filter(filterDrops).map((drop) => (
-          <div key={drop._id}>
-            <Link href={`${CURATED_DROP_DETAILS}/${drop.slug}`}>
-              {drop.sampleImages?.length > 0 ? (
-                <Image
-                  alt="alt"
-                  height={900}
-                  quality={100}
-                  src={drop.sampleImages[0].url}
-                  width={1200}
-                />
-              ) : (
-                // TODO - show default image if drop has no cover
-                <>
-                  <h3>{drop.name}</h3>
-                  <p>{drop.status}</p>
-                </>
+        {drops
+          .slice(0, MAX_DROPS)
+          .filter(filterDrops)
+          .map((drop) => (
+            <div
+              className={styles.drop}
+              key={drop._id}
+              onMouseEnter={() => setHoveredDrop(drop._id)}
+              onMouseLeave={() => setHoveredDrop(null)}
+            >
+              <DropCover drop={drop} />
+              {hoveredDrop === drop._id && (
+                <DropCoverOverlay name={drop.name} status={drop.status} />
               )}
-            </Link>
-          </div>
-        ))}
+            </div>
+          ))}
       </div>
     </div>
   );
-}
+};
