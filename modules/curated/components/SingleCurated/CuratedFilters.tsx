@@ -1,20 +1,21 @@
 import { HeaderLink } from 'components/HeaderLink/HeaderLink';
+import { CURATED_DROP_DETAILS } from 'utils/routes';
 
 const LINKS = [
   {
-    url: '/curated/oneiroscapes#tabs',
+    url: `${CURATED_DROP_DETAILS}#tabs`,
     title: 'About the project',
   },
   {
-    url: '/curated/oneiroscapes/the-artist#tabs',
+    url: `${CURATED_DROP_DETAILS}/the-artist#tabs`,
     title: 'The artist',
   },
   {
-    url: '/curated/oneiroscapes/claim#tabs',
+    url: `${CURATED_DROP_DETAILS}/claim#tabs`,
     title: 'Sentient claim',
   },
   {
-    url: '/curated/oneiroscapes/mint#tabs',
+    url: `${CURATED_DROP_DETAILS}/mint#tabs`,
     title: 'Mint',
   },
 ];
