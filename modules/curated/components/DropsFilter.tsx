@@ -4,6 +4,7 @@ import { Dispatch, SetStateAction } from 'react';
 import { MintStatus } from 'types/drops';
 
 type DropsFilterProps = {
+  selectedFilter: MintStatus;
   setFilter: Dispatch<SetStateAction<MintStatus>>;
 };
 
@@ -14,13 +15,20 @@ const MintStatusText = {
   [MintStatus.SOLD_OUT]: 'Sold Out',
 };
 
-export default function DropsFilter({ setFilter }: DropsFilterProps) {
+export default function DropsFilter({
+  selectedFilter,
+  setFilter,
+}: DropsFilterProps) {
   return (
     <div className="grid w-full mx-auto my-3 md:grid-cols-2 max-w-screen-2xl">
       <h2 className="text-2xl text-left">Our Drops</h2>
       <div className="flex items-center justify-end gap-3">
         {Object.values(MintStatus).map((value) => (
-          <FilterButton key={value} onClick={() => setFilter(value)}>
+          <FilterButton
+            isActive={value === selectedFilter}
+            key={value}
+            onClick={() => setFilter(value)}
+          >
             {MintStatusText[value]}
           </FilterButton>
         ))}

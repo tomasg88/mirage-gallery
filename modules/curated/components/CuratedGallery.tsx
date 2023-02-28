@@ -31,7 +31,10 @@ export const CuratedGallery = ({ drops }: CuratedGalleryProps) => {
 
   return (
     <div className="px-6">
-      <DropsFilter setFilter={setSelectedStatus} />
+      <DropsFilter
+        selectedFilter={selectedStatus}
+        setFilter={setSelectedStatus}
+      />
       <div className={styles.gallery}>
         {drops
           .slice(0, MAX_DROPS)
