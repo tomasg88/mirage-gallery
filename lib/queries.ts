@@ -6,7 +6,7 @@ import { groq } from 'next-sanity';
 export const dropsQuery = groq`
   *[_type == "drop"] {
     ...,
-    "cover": sampleImages[0].url,
+    "cover": sampleImages[0],
     "slug": slug.current,
   }
 `;
