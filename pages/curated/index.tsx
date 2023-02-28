@@ -1,7 +1,7 @@
 import { dropsQuery } from 'lib/queries';
 import { sanityClient } from 'lib/sanity.client';
 import BecomeCuratedArtist from 'modules/curated/components/BecomeCuratedArtist';
-import CuratedGallery from 'modules/curated/components/CuratedGallery';
+import { CuratedGallery } from 'modules/curated/components/CuratedGallery';
 import CuratedHero from 'modules/curated/components/CuratedHero';
 import MintProject from 'modules/curated/components/MintProject';
 import { GetServerSideProps, GetServerSidePropsResult } from 'next';
