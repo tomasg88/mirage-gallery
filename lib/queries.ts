@@ -10,3 +10,7 @@ export const dropsQuery = groq`
     "slug": slug.current,
   }
 `;
+
+export const dropBySlugQuery = groq`
+  *[_type == "drop" && slug.current == $slug][0]
+`;

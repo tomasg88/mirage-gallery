@@ -2,8 +2,9 @@ import { Fragment, useState } from 'react';
 import Image from 'next/image';
 import { BigPlayButton, Player } from 'video-react';
 import { Dialog, Transition } from '@headlessui/react';
+import { Drop } from 'types/drops';
 
-export const FullWidthVideoModal = () => {
+export const FullWidthVideoModal = ({ video }: { video: Drop['video'] }) => {
   const [isOpen, setIsOpen] = useState(false);
 
   function closeModal() {
@@ -86,10 +87,7 @@ export const FullWidthVideoModal = () => {
                   <Dialog.Title as="h3" className="hidden">
                     About
                   </Dialog.Title>
-                  <Player
-                    poster="/assets/2.jpg"
-                    src="https://res.cloudinary.com/srcouto/video/upload/q_auto:eco/v1628057438/encoder/herohdsantuan0001-0250_wpgean.mp4"
-                  >
+                  <Player poster="/assets/2.jpg" src={video.url}>
                     <BigPlayButton position="center" />
                   </Player>
                 </Dialog.Panel>
