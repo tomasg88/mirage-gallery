@@ -1,16 +1,41 @@
-import Image from 'next/image';
-
 export default function CryptoNativeArtDevelops() {
   return (
-    <div className="py-24">
-      <div className="flex items-center justify-center max-w-3xl mx-auto">
-        <Image
-          alt="imagen"
-          className="object-cover w-full"
-          height={500}
-          src="/assets/crypto-native/cryptonative-1-art.jpg"
-          width={1200}
-        />
+    <div>
+      <div className="w-full min-h-screen ">
+        <div
+          className="relative flex items-center justify-center w-full min-h-screen mx-auto bg-fixed bg-center bg-no-repeat md:bg-contain"
+          style={{
+            backgroundImage:
+              'url("/assets/crypto-native/crypto-native-01.jpg")',
+          }}
+        ></div>
+      </div>
+      <div className="w-full min-h-screen ">
+        <div
+          className="relative flex items-center justify-center w-full min-h-screen mx-auto bg-fixed bg-center bg-no-repeat md:bg-contain"
+          style={{
+            backgroundImage:
+              'url("/assets/crypto-native/crypto-native-02.jpg")',
+          }}
+        ></div>
+      </div>
+      <div className="w-full min-h-screen ">
+        <div
+          className="relative flex items-center justify-center w-full min-h-screen mx-auto bg-fixed bg-center bg-no-repeat md:bg-contain"
+          style={{
+            backgroundImage:
+              'url("/assets/crypto-native/crypto-native-03.jpg")',
+          }}
+        ></div>
+      </div>
+      <div className="w-full min-h-screen ">
+        <div
+          className="relative flex items-center justify-center w-full min-h-screen mx-auto bg-fixed bg-center bg-no-repeat md:bg-contain"
+          style={{
+            backgroundImage:
+              'url("/assets/crypto-native/crypto-native-04.jpg")',
+          }}
+        ></div>
       </div>
     </div>
   );
