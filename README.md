@@ -1,38 +1,49 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Mirage Gallery
 
-## Getting Started
+## Description
+New site for Mirage Gallery Art.
 
-First, run the development server:
+## Design
+The mockup for this project can be found in this [Figma](https://www.figma.com/file/HdXTxrcixSvwiaa2PZMmc7/MirageGallery-Redesign?node-id=141%3A4528&t=3XVlljiXxSlLdwv7-0).
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-```
+## Tools and Technologies
+The main tools used to build this site are:
+* **[Nextjs 13](http://nextjs.org/)** - with the `pages` structure
+* **[Sanity CMS](https://www.sanity.io/)** - to allow managing data
+* **[Cloudinary](https://cloudinary.com/)** - to manage all multimedia assets
+* **[Vercel](https://vercel.com/)** to host this project
+* **[next-sanity](https://www.npmjs.com/package/next-sanity)** to allow the usage of Sanity SDK inside Nextjs
+* **[sanity-plugin-cloudinary](https://github.com/sanity-io/sanity-plugin-cloudinary)** allows integration of Cloudinary within the Sanity Studio
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### CMS's and Data
+Sanity Studio is hosted inside the same project under a specific path. 
 
-You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
+### Getting started
+1. `git clone` the repo
+2. `yarn` Install dependencies
+3. `yarn dev` to run the site
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
+### Folder Structure
+* `components` - shared components
+* `lib` - mainly Sanity files (queries, sanity client, schemas definition, etc.)
+* `modules` - react components organized _by feature_
+* `pages` - Next.js folder with routes
+* `public` - assets
+* `styles` - global styles
+* `types` - Typescript types
+* `utils` - contants, routes, JS functions, etc. 
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+## Roadmap
+### UI changes
+1. Add artist to the Drop Overlay
+2. Move _Sample Works_ from _The Artist_ to _About the Project_ tab
+3. Parallax effect in /crypto-native
+4. Add trackpad support in Home Carrousel
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+### Functionality
+* Curated page
+1. Add Claim functionality
+2. Add Mint functionality
+3. Integrate with smart contract to show PreSale or Public Sale
+4. Integrate with smart contract and show remaining artworks to be minted / claim 
 
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
