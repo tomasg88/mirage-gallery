@@ -6,7 +6,10 @@ import { Drop } from 'types/drops';
 
 export const DropCover = ({ drop }: { drop: Drop }) => {
   return (
-    <Link href={`${CURATED_DROP_DETAILS}/${drop.slug}`}>
+    <Link
+      className="block w-full h-full"
+      href={`${CURATED_DROP_DETAILS}/${drop.slug}`}
+    >
       {drop.cover && drop.cover.url ? (
         <Image
           alt={drop.name}
@@ -17,7 +20,7 @@ export const DropCover = ({ drop }: { drop: Drop }) => {
         />
       ) : (
         // TODO - show default image if drop has no cover a.k.a sampleImages
-        <span className="text-xs">{'Drop has no cover!'}</span>
+        <p className="text-xs">{'Drop has no cover!'}</p>
       )}
     </Link>
   );
