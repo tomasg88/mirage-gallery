@@ -2,7 +2,7 @@ import React from 'react';
 
 export const Claim = () => {
   return (
-    <div className="grid w-full px-2 mx-auto max-w-screen-2xl md:grid-cols-2">
+    <div className="grid w-full px-2 my-3 mx-auto max-w-screen-2xl md:grid-cols-2">
       <div className="">
         <h2 className="text-2xl text-left">Claim</h2>
         <div>
