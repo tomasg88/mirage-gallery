@@ -12,3 +12,7 @@
   @apply focus:ring-2 focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-opacity-75 focus-visible:ring-offset-2;
   @apply print:hidden print:bg-gray-200 print:text-gray-900 !important;
 }
+
+.active {
+  @apply bg-[#920d3d] text-white;
+}

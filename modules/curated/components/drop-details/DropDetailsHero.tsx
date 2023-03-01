@@ -1,8 +1,10 @@
 import { OpenSeaLogo } from 'components/Svgs/OpenSeaLogo';
 import { SoldOutSvg } from 'components/Svgs/SoldOutSvg';
 import Image from 'next/image';
+import { Drop } from 'types/drops';
+import { MintStatusText } from 'modules/curated/components/DropsFilter';
 
-export default function HeroSoldOut() {
+export const DropDetailsHero = ({ drop }: { drop: Drop }) => {
   return (
     <>
       <div className="w-full h-[500px]">
@@ -22,7 +24,7 @@ export default function HeroSoldOut() {
         <div className="flex items-center justify-between my-6">
           <span className="flex items-center justify-center px-3 py-2 text-xs text-black bg-gray-200 rounded-full">
             <SoldOutSvg className="mr-2" />
-            Sold out
+            {MintStatusText[drop.status]}
           </span>
           <div className="flex justify-end">
             <button
@@ -34,15 +36,9 @@ export default function HeroSoldOut() {
             </button>
           </div>
         </div>
-        <h2 className="text-3xl">Oneiroscapes</h2>
-        <p className="my-6 md:w-1/2">
-          Dreams are the realm of possibility, a space in which we can explore
-          our innermost imaginations. Through dreams, we can access boundless
-          creativity, magical realms and fantastical journeys, allowing us to
-          escape the boundaries of our waking lives. Venture beyond the
-          boundaries of reality and explore the world of oneironautics.
-        </p>
+        <h2 className="text-3xl">{drop.name}</h2>
+        <p className="my-6 md:w-1/2">{drop.description}</p>
       </div>
     </>
   );
-}
+};
