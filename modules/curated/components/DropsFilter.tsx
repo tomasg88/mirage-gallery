@@ -8,7 +8,7 @@ type DropsFilterProps = {
   setFilter: Dispatch<SetStateAction<MintStatus>>;
 };
 
-const MintStatusText = {
+export const MintStatusText = {
   [MintStatus.ALL]: 'All',
   [MintStatus.UPCOMING]: 'Upcoming',
   [MintStatus.MINTING]: 'Minting',
