@@ -22,7 +22,8 @@
 }
 
 .drop:nth-child(4) {
-  @apply sm:col-span-3 h-72;
+  @apply sm:col-span-3;
+  height: 39rem;
 }
 
 .drop:nth-child(5) {
@@ -70,5 +71,5 @@
 }
 
 .dropOverlay {
-  @apply absolute bg-black bg-opacity-60 flex flex-col justify-between inset-0 w-full h-full p-8 text-white pointer-events-none;
+  @apply absolute bg-black duration-300 bg-opacity-60 flex flex-col justify-between inset-0 w-full h-full p-8 text-white pointer-events-none;
 }
