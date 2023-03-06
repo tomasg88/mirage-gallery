@@ -1,7 +1,7 @@
 import Link from 'next/link';
 import { ROUTES } from 'utils/routes';
 import { MirageGalleryLogo } from 'components/Svgs/MirageGalleryLogo';
-import ConnectWalletButton from 'components/Button/ConnectWalletButton/ConnectWalletButton';
+import { ConnectWalletButton } from 'components/Button/ConnectWalletButton/ConnectWalletButton';
 
 export default function Header() {
   return (
