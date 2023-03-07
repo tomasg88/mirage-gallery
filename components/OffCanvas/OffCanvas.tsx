@@ -1,7 +1,7 @@
 import React, { useCallback, useState } from 'react';
 import { slide as Menu } from 'react-burger-menu';
 import { OffCanvasNavigation } from './OffCanvasNavigation';
-import ConnectWalletButton from 'components/Button/ConnectWalletButton/ConnectWalletButton';
+import { ConnectWalletButtonWrapper } from 'components/Button/ConnectWalletButton/ConnectWalletButtonWrapper';
 
 export const OffCanvas = () => {
   const [openMenu, setOpenMenu] = useState(false);
@@ -18,7 +18,7 @@ export const OffCanvas = () => {
     <Menu isOpen={openMenu} onStateChange={handleStateChange} right width={260}>
       <OffCanvasNavigation closeMenu={closeMenu} />
       <div className="absolute bottom-0 right-0 m-6">
-        <ConnectWalletButton />
+        <ConnectWalletButtonWrapper />
       </div>
     </Menu>
   );

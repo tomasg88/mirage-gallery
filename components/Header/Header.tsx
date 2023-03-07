@@ -1,7 +1,7 @@
 import Link from 'next/link';
 import { ROUTES } from 'utils/routes';
 import { MirageGalleryLogo } from 'components/Svgs/MirageGalleryLogo';
-import ConnectWalletButton from 'components/Button/ConnectWalletButton/ConnectWalletButton';
+import { ConnectWalletButtonWrapper } from 'components/Button/ConnectWalletButton/ConnectWalletButtonWrapper';
 
 export default function Header() {
   return (
@@ -28,7 +28,7 @@ export default function Header() {
         </nav>
         <div style={{ flex: '1' }} />
         <div className="absolute bottom-0 hidden right-32 xl:flex xl:right-0 xl:relative">
-          <ConnectWalletButton />
+          <ConnectWalletButtonWrapper />
         </div>
       </div>
     </header>
