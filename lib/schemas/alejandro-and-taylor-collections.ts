@@ -5,6 +5,11 @@ export const alejandroAndTaylorCollections = defineType({
     defineField({
       name: 'collectionNumber',
       title: 'Collection Number',
+      type: 'number',
+    }),
+    defineField({
+      name: 'collectionName',
+      title: 'Collection Name',
       type: 'string',
     }),
     defineField({

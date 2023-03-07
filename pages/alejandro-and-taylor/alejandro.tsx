@@ -14,12 +14,15 @@ export default function AlejandroPage({
   collections: AlejandroAndTaylorCollection[];
 }) {
   // index of current selected tab
-  const [collectionSelected, setCollectionSelected] = useState<number>(0);
+  const [collectionSelectedIndex, setCollectionSelectedIndex] =
+    useState<number>(0);
+
+  const collectionSelected = collections[collectionSelectedIndex];
 
   const getFallbackAlt = useCallback(
     (imageIndex: number) =>
-      `${collections[collectionSelected].images[imageIndex].name} image`,
-    [collections, collectionSelected]
+      `${collectionSelected.images[imageIndex].name} image`,
+    [collections, collectionSelectedIndex]
   );
 
   return (
@@ -30,12 +33,12 @@ export default function AlejandroPage({
           {collections.map(({ collectionNumber }, index) => (
             <button
               className={
-                index === collectionSelected
+                index === collectionSelectedIndex
                   ? 'text-[#074f65]'
                   : 'text-[#808080]'
               }
               key={collectionNumber}
-              onClick={() => setCollectionSelected(index)}
+              onClick={() => setCollectionSelectedIndex(index)}
             >
               {collectionNumber}
             </button>
@@ -44,9 +47,11 @@ export default function AlejandroPage({
       </div>
       <div className="px-2 mx-auto max-w-screen-2xl">
         <div className="grid w-full mx-auto my-3 md:grid-cols-2 max-w-screen-2xl">
-          <h2 className="text-2xl text-left">Collection 3</h2>
+          <h2 className="text-2xl text-left">
+            {collectionSelected.collectionName}
+          </h2>
           <div className="flex items-center justify-end ">
-            <Link href={collections[collectionSelected].openSeaUrl}>
+            <Link href={collectionSelected.openSeaUrl}>
               <div>
                 <OpenSeaLogo className="w-4 mr-2" />
               </div>
@@ -55,25 +60,23 @@ export default function AlejandroPage({
           </div>
         </div>
         <div className="grid grid-cols-2 gap-6 md:grid-cols-4 gap-y-20">
-          {collections[collectionSelected].images.map(
-            (collectionImage, index) => (
-              <div key={collectionImage.image._key}>
-                <Image
-                  alt={
-                    collectionImage.image.context?.custom.alt ||
-                    getFallbackAlt(index)
-                  }
-                  height={900}
-                  quality={100}
-                  src={collectionImage.image.url}
-                  width={1200}
-                />
-                <h4 className="my-3 text-sm ">{collectionImage.name}</h4>
-                {/* TODO - is status shown? */}
-                {/* <p className="text-xs uppercase">{image.status}</p> */}
-              </div>
-            )
-          )}
+          {collectionSelected.images.map((collectionImage, index) => (
+            <div key={collectionImage.image._key}>
+              <Image
+                alt={
+                  collectionImage.image.context?.custom.alt ||
+                  getFallbackAlt(index)
+                }
+                height={900}
+                quality={100}
+                src={collectionImage.image.url}
+                width={1200}
+              />
+              <h4 className="my-3 text-sm ">{collectionImage.name}</h4>
+              {/* TODO - is status shown? */}
+              {/* <p className="text-xs uppercase">{image.status}</p> */}
+            </div>
+          ))}
         </div>
       </div>
     </div>

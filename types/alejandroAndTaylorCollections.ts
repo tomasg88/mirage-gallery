@@ -6,7 +6,8 @@ type CollectionImage = {
 };
 
 export type AlejandroAndTaylorCollection = {
-  collectionNumber: string;
+  collectionNumber: number;
+  collectionName: string;
   images: CollectionImage[];
   openSeaUrl: string;
 };
