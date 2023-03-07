@@ -8,19 +8,45 @@ import { AboutTheProject } from 'modules/curated/components/drop-details/AboutTh
 import { Artist } from 'modules/curated/components/drop-details/Artist';
 import { Claim } from 'modules/curated/components/drop-details/Claim';
 import { Mint } from 'modules/curated/components/drop-details/Mint';
+import { Fragment } from 'react';
+
+const TABS = [
+  {
+    title: 'About the project',
+  },
+  {
+    title: 'The artist',
+  },
+  {
+    title: 'Sentient claim',
+  },
+  {
+    title: 'Mint',
+  },
+];
 
 export default function SlugPage({ drop }: { drop: Drop }) {
   return (
     <div className="w-full pb-24">
       <DropDetailsHero drop={drop} />
-      <Tab.Group>
-        <Tab.List className="flex items-center justify-start gap-6 px-2 py-3 mx-auto text-xs md:text-base md:gap-12 max-w-screen-2xl border-b">
-          <Tab>About the project</Tab>
-          <Tab>The artist</Tab>
-          <Tab>Sentient claim</Tab>
-          <Tab>Mint</Tab>
+      <Tab.Group defaultIndex={0}>
+        <Tab.List className="flex items-center justify-start gap-6 px-2 py-3 mx-auto text-xs border-b md:text-base md:gap-12 max-w-screen-2xl">
+          {TABS.map(({ title }) => (
+            <Tab as={Fragment} key={title}>
+              {({ selected }) => (
+                <button
+                  className={`${
+                    selected ? 'text-[#920D3D]' : ''
+                  } outline-none `}
+                  type="button"
+                >
+                  {title}
+                </button>
+              )}
+            </Tab>
+          ))}
         </Tab.List>
-        <Tab.Panels>
+        <Tab.Panels className="pt-12">
           <Tab.Panel>
             <AboutTheProject drop={drop} />
           </Tab.Panel>
