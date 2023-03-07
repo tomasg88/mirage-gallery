@@ -63,8 +63,7 @@ export const CuratedArtistForm = (): JSX.Element => {
         setFormStatus(FormStatusEnum.SENT_OK);
         setForm(initialForm);
       })
-      .catch((error) => {
-        console.log({ error });
+      .catch(() => {
         setFormStatus(FormStatusEnum.ERROR);
       });
   };
