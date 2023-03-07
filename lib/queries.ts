@@ -14,3 +14,7 @@ export const dropsQuery = groq`
 export const dropBySlugQuery = groq`
   *[_type == "drop" && slug.current == $slug][0]
 `;
+
+export const collectionsQuery = groq`
+  *[_type == "alejandro-and-taylor-collections"]
+`;
