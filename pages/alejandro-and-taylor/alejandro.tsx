@@ -40,7 +40,7 @@ export default function AlejandroPage({
               key={collectionNumber}
               onClick={() => setCollectionSelectedIndex(index)}
             >
-              {collectionNumber}
+              {`Collection ${collectionNumber}`}
             </button>
           ))}
         </div>
