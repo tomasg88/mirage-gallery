@@ -5,13 +5,13 @@ import 'swiper/css';
 import { GALLERY } from 'utils/gallery';
 import 'swiper/css/navigation';
 
-import { Navigation } from 'swiper';
+import { Mousewheel, Navigation } from 'swiper';
 import { RightArrow } from 'components/Svgs/RightArrow';
 
 export default function HomeHero() {
   return (
     <div className="relative z-10 w-full min-h-[70vh] md:min-h-screen border-b border-gray-200">
-      <div className="w-full px-2 ">
+      <div className="w-full">
         <h1 className="text-3xl leading-normal lg:text-[96px] max-w-screen-2xl mx-auto lg:leading-[112px] my-6">
           A new generation of <span className="text-[#808080]">art.</span>
         </h1>
@@ -23,8 +23,15 @@ export default function HomeHero() {
             },
           }}
           centeredSlides={true}
+          direction={'horizontal'}
           loop={true}
-          modules={[Navigation]}
+          modules={[Mousewheel, Navigation]}
+          mousewheel={{
+            forceToAxis: true,
+            sensitivity: 0.01,
+            thresholdDelta: 10,
+            releaseOnEdges: true,
+          }}
           navigation={true}
           slidesPerView={1}
           spaceBetween={50}
@@ -36,7 +43,7 @@ export default function HomeHero() {
                   <Image
                     alt="alt"
                     blurDataURL={`/assets/blur-${i.img}`}
-                    className="object-cover w-full"
+                    className="object-cover h-64 md:h-[500px] w-full"
                     height={900}
                     placeholder="blur"
                     quality={100}
@@ -44,7 +51,7 @@ export default function HomeHero() {
                     width={1200}
                   />
                 </div>
-                <div className="flex justify-between w-full mt-12 slide-item-inview">
+                <div className="flex justify-between w-full mt-6 slide-item-inview">
                   <span className="px-3 py-2 text-sm bg-gray-100">
                     Featured drop
                   </span>
