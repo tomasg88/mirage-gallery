@@ -10,6 +10,7 @@ import {
   cloudinarySchemaPlugin,
 } from 'sanity-plugin-cloudinary';
 import { visionTool } from '@sanity/vision';
+import { artistFormSubmissions } from 'lib/schemas/artist-form-submission';
 
 export const config = defineConfig({
   basePath: process.env.NEXT_PUBLIC_SANITY_BASE_PATH,
@@ -32,6 +33,7 @@ export const config = defineConfig({
       // documents
       curated,
       alejandroAndTaylorCollections,
+      artistFormSubmissions,
     ],
   },
   title: process.env.NEXT_PUBLIC_SANITY_TITLE,
