@@ -64,6 +64,12 @@ export const curated = defineType({
     }),
     defineField({
       fieldset: 'mint-details',
+      name: 'releaseDate',
+      title: 'Release Date',
+      type: 'datetime', // https://www.sanity.io/docs/datetime-type
+    }),
+    defineField({
+      fieldset: 'mint-details',
       name: 'status',
       options: {
         direction: 'horizontal',
