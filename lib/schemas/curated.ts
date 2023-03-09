@@ -54,8 +54,8 @@ export const curated = defineType({
       name: 'artists',
       of: [{ type: 'curatedArtist' }],
       type: 'array',
-      // validation: (rule) =>
-      //   rule.required().error('There should be at least one artist'),
+      validation: (rule) =>
+        rule.required().error('There should be at least one artist'),
     }),
     defineField({
       description: 'Details of the project',
