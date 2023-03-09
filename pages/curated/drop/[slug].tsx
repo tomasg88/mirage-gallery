@@ -62,7 +62,7 @@ export default function SlugPage({ drop }: { drop: Drop }) {
             <Claim />
           </Tab.Panel>
           <Tab.Panel>
-            <Mint project={project} />
+            <Mint projectId={project.id} />
           </Tab.Panel>
         </Tab.Panels>
       </Tab.Group>
