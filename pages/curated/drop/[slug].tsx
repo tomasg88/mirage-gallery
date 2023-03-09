@@ -26,6 +26,7 @@ const TABS = [
 ];
 
 export default function SlugPage({ drop }: { drop: Drop }) {
+  const { artists, project, releaseDate, video } = drop;
   return (
     <div className="w-full pb-24">
       <DropDetailsHero drop={drop} />
@@ -48,16 +49,20 @@ export default function SlugPage({ drop }: { drop: Drop }) {
         </Tab.List>
         <Tab.Panels className="pt-12">
           <Tab.Panel>
-            <AboutTheProject drop={drop} />
+            <AboutTheProject
+              project={project}
+              releaseDate={releaseDate}
+              video={video}
+            />
           </Tab.Panel>
           <Tab.Panel>
-            <Artist drop={drop} />
+            <Artist artists={artists} />
           </Tab.Panel>
           <Tab.Panel>
             <Claim />
           </Tab.Panel>
           <Tab.Panel>
-            <Mint drop={drop} />
+            <Mint project={project} />
           </Tab.Panel>
         </Tab.Panels>
       </Tab.Group>

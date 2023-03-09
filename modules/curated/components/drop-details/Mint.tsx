@@ -2,7 +2,7 @@ import RefreshSvg from 'components/Svgs/RefreshSvg';
 import React from 'react';
 import { Drop } from 'types/drops';
 
-export const Mint = ({ drop }: { drop: Drop }) => {
+export const Mint = ({ project }: { project: Drop['project'] }) => {
   return (
     <div className="grid w-full px-2 my-3  mx-auto max-w-screen-2xl md:grid-cols-2">
       <div>
@@ -12,7 +12,7 @@ export const Mint = ({ drop }: { drop: Drop }) => {
             <span className="mb-2 font-sans">Project</span>
             <input
               className="w-full p-3 font-sans text-gray-800 bg-gray-100"
-              placeholder={drop.project.name}
+              placeholder={project.name}
               type="text"
             />
           </label>
