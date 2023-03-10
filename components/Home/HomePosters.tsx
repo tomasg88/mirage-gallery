@@ -3,7 +3,7 @@ import Link from 'next/link';
 import 'swiper/css';
 import { RightArrow } from 'components/Svgs/RightArrow';
 
-export default function HomeHero() {
+export const HomePosters = () => {
   return (
     <div className="relative z-10 w-full min-h-screen pt-24 border-b border-gray-200">
       <div className="px-2 mx-auto max-w-screen-2xl">
@@ -37,7 +37,7 @@ export default function HomeHero() {
       </div>
     </div>
   );
-}
+};
 
 const DROPS = [
   {

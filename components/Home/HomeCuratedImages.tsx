@@ -3,7 +3,7 @@ import Image from 'next/image';
 import 'swiper/css';
 import 'swiper/css/navigation';
 
-export default function HomeHero() {
+export const HomeCuratedImages = () => {
   return (
     <div className="grid h-64 grid-cols-10 my-6 overflow-hidden">
       {GALLERY.map((img) => (
@@ -22,7 +22,7 @@ export default function HomeHero() {
       ))}
     </div>
   );
-}
+};
 
 const GALLERY = [
   {

@@ -10,7 +10,7 @@ import Link from 'next/link';
 import { CURATED_DROP_DETAILS } from 'utils/routes';
 import { HomeProps } from 'pages';
 
-export default function HomeHero({ drops }: { drops: HomeProps[] }) {
+export const HomeHero = ({ drops }: { drops: HomeProps[] }) => {
   return (
     <div className="relative z-10 w-full min-h-[70vh] md:min-h-screen border-b border-gray-200">
       <div className="w-full">
@@ -78,4 +78,4 @@ export default function HomeHero({ drops }: { drops: HomeProps[] }) {
       </div>
     </div>
   );
-}
+};
