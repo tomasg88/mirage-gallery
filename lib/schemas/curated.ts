@@ -23,8 +23,7 @@ export const curated = defineType({
       name: 'name',
       title: 'Name',
       type: 'string',
-      validation: (rule) =>
-        rule.required().length(50).warning('You have reached 50 characters'),
+      validation: (rule) => rule.required(),
     }),
     defineField({
       fieldset: 'drop-details',
@@ -47,15 +46,13 @@ export const curated = defineType({
       name: 'video',
       title: 'Drop Video',
       type: 'cloudinary.asset',
-      validation: (rule) => rule.required(),
     }),
     defineField({
       description: 'Details of our curated artist',
       name: 'artists',
       of: [{ type: 'curatedArtist' }],
       type: 'array',
-      validation: (rule) =>
-        rule.required().error('There should be at least one artist'),
+      validation: (rule) => rule.required().min(1),
     }),
     defineField({
       description: 'Details of the project',
@@ -98,27 +95,6 @@ export const curated = defineType({
       fieldset: 'mint-details',
       name: 'mintPrice',
       title: 'Mint Price',
-      type: 'number',
-      validation: (rule) => rule.required(),
-    }),
-    defineField({
-      fieldset: 'mint-details',
-      name: 'preSaleAmount',
-      title: 'Available pieces for Pre Sale',
-      type: 'number',
-      validation: (rule) => rule.required(),
-    }),
-    defineField({
-      fieldset: 'mint-details',
-      name: 'publicSaleAmount',
-      title: 'Available pieces for Public Sale',
-      type: 'number',
-      validation: (rule) => rule.required(),
-    }),
-    defineField({
-      fieldset: 'mint-details',
-      name: 'totalAmount',
-      title: 'Total amount of pieces available',
       type: 'number',
       validation: (rule) => rule.required(),
     }),
