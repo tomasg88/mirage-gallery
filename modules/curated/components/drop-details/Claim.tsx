@@ -2,7 +2,7 @@ import React from 'react';
 
 export const Claim = () => {
   return (
-    <div className="grid w-full px-2 my-3 mx-auto max-w-screen-2xl md:grid-cols-2">
+    <div className="grid w-full px-2 mx-auto my-3 max-w-screen-2xl md:grid-cols-2">
       <div className="">
         <h2 className="text-2xl text-left">Claim</h2>
         <div>
@@ -50,7 +50,7 @@ export const Claim = () => {
           </div>
           <div>
             <button
-              className="flex items-center justify-center py-3 text-white duration-300 bg-[#920d3d] px-9"
+              className="flex items-center justify-center py-3 text-white duration-300 bg-curated px-9"
               type="button"
             >
               Claim

@@ -21,7 +21,7 @@ export default function DreamingBetterWorldPage() {
             width={1700}
           />
         </div>
-        <HeroTitle accentColor={'text-[#1129AA]'} subtitle="How it works">
+        <HeroTitle accentColor={'text-dreamers'} subtitle="How it works">
           We&apos;d like to introduce Dreamers: Dreaming of a better world.
         </HeroTitle>
         <p>

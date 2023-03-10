@@ -22,7 +22,7 @@ export default function CryptoNativeBestPhase() {
             View on Opensea
           </button>
           <button
-            className="bg-[#431281] flex justify-center items-center text-white py-3"
+            className="flex items-center justify-center py-3 text-white bg-native"
             type="button"
           >
             Dashboard

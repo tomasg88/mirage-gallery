@@ -12,7 +12,7 @@ export default function DreamersHero() {
     >
       <div className="grid w-full grid-cols-2 gap-6 px-6 mx-auto max-w-screen-2xl">
         <div className="grid w-full mt-16">
-          <span className="text-sm uppercase text-[#1129aa]">DREAMERS</span>
+          <span className="text-sm uppercase text-dreamers">DREAMERS</span>
           <h1 className="mt-6 text-3xl lg:text-7xl">
             The artistic intersection of humans and artificial intelligence.
           </h1>

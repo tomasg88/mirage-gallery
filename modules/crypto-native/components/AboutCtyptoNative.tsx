@@ -6,7 +6,7 @@ import { PlayIconSvg } from 'components/Svgs/PlayIconSvg';
 export default function AboutCtyptoNative() {
   return (
     <div className="py-24">
-      <HeroTitle accentColor={'text-[#431281]'} subtitle="About">
+      <HeroTitle accentColor={'text-native'} subtitle="About">
         With Crypto-Native, the artwork evolves when a secondary sale happens.
       </HeroTitle>
       <p className="mx-auto text-lg text-gray-600 md:text-3xl ">

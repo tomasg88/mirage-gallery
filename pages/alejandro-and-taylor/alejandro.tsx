@@ -34,7 +34,7 @@ export default function AlejandroPage({
             <button
               className={
                 index === collectionSelectedIndex
-                  ? 'text-[#074f65]'
+                  ? 'text-original'
                   : 'text-[#808080]'
               }
               key={collectionNumber}

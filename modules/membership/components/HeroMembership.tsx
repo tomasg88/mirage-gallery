@@ -15,7 +15,7 @@ export default function HeroMembership() {
       </div>
       <div className="px-2 mx-auto md:px-2 max-w-screen-2xl">
         <div className="flex items-center justify-between my-6">
-          <span className="flex items-center justify-center bg-[#fefaec] text-xs px-3 py-2 rounded-full text-[#e2b310]">
+          <span className="flex items-center justify-center bg-[#fefaec] text-xs px-3 py-2 rounded-full text-membership">
             Mirage gallery
           </span>
           <button
