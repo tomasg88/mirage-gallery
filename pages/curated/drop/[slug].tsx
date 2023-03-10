@@ -33,6 +33,7 @@ export default function SlugPage({ drop }: { drop: Drop }) {
     name,
     project,
     releaseDate,
+    sampleImages,
     status,
     video,
   } = drop;
@@ -40,6 +41,7 @@ export default function SlugPage({ drop }: { drop: Drop }) {
   return (
     <div className="w-full pb-24">
       <DropDetailsHero
+        cover={sampleImages[0]}
         description={description}
         marketplaceUrl={marketplaceUrl}
         name={name}
