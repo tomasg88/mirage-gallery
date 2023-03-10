@@ -1,12 +1,12 @@
 import Image from 'next/image';
-import { OpenSeaLogo } from 'components/Svgs/OpenSeaLogo';
 import AlejandroHero from 'modules/alejandro-and-taylor/components/AlejandroHero';
 import { GetStaticProps, GetStaticPropsResult } from 'next';
 import { AlejandroAndTaylorCollection } from 'types/alejandroAndTaylorCollections';
 import { sanityClient } from 'lib/sanity.client';
 import { collectionsQuery } from 'lib/queries';
 import { useCallback, useState } from 'react';
-import Link from 'next/link';
+import { OpenSeaButtonLink } from 'components/Link/OpenSeaButtonLink';
+import { MARKETPLACE_URLS } from 'utils/constants';
 
 export default function AlejandroPage({
   collections,
@@ -51,12 +51,7 @@ export default function AlejandroPage({
             {collectionSelected.collectionName}
           </h2>
           <div className="flex items-center justify-end ">
-            <Link href={collectionSelected.openSeaUrl}>
-              <div>
-                <OpenSeaLogo className="w-4 mr-2" />
-              </div>
-              Full collection
-            </Link>
+            <OpenSeaButtonLink href={MARKETPLACE_URLS.alejandroAndTaylor} />
           </div>
         </div>
         <div className="grid grid-cols-2 gap-6 md:grid-cols-4 gap-y-20">

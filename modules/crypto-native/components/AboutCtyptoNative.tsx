@@ -1,7 +1,8 @@
 import Image from 'next/image';
 import { HeroTitle } from 'components/HeroTitle/HeroTitle';
-import { OpenSeaLogo } from 'components/Svgs/OpenSeaLogo';
 import { PlayIconSvg } from 'components/Svgs/PlayIconSvg';
+import { OpenSeaButtonLink } from 'components/Link/OpenSeaButtonLink';
+import { MARKETPLACE_URLS } from 'utils/constants';
 
 export default function AboutCtyptoNative() {
   return (
@@ -14,13 +15,7 @@ export default function AboutCtyptoNative() {
         get to own a unique step in the 10 phases of evolution for a piece.
       </p>
       <div className="flex items-center justify-start mt-6">
-        <button
-          className="flex items-center justify-center py-3 text-black duration-300 bg-gray-200 px-9 hover:bg-gray-100"
-          type="button"
-        >
-          <OpenSeaLogo className="mr-2" />
-          View on Opensea
-        </button>
+        <OpenSeaButtonLink href={MARKETPLACE_URLS.cryptoNative} />
       </div>
       <div className="h-[500px] overflow-hidden my-6 relative">
         <div className="absolute inset-0 flex items-center justify-center bg-gray-900/60">

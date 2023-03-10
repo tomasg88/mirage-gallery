@@ -1,6 +1,6 @@
 import { CloudinaryAsset } from './cloudinary';
 
-type Artist = {
+export type Artist = {
   _key: string;
   name: string;
   bio: string;
@@ -28,6 +28,7 @@ export type Drop = {
   artists: Artist[];
   cover: CloudinaryAsset | null; // This is the same sampleImages[0].url
   description: string;
+  marketplaceUrl: string;
   mintPrice: number;
   name: string;
   preSaleAmount: number;

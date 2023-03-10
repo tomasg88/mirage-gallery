@@ -1,3 +1,5 @@
+import { MARKETPLACE_URLS } from 'utils/constants';
+
 export default function MembershipViewOrClaim() {
   return (
     <>
@@ -11,7 +13,12 @@ export default function MembershipViewOrClaim() {
                 on the secondary market.
               </p>
             </div>
-            <a className="text-3xl" href="" target="_blank">
+            <a
+              className="text-3xl"
+              href={MARKETPLACE_URLS.membership}
+              rel="noreferrer"
+              target="_blank"
+            >
               View on opensea
             </a>
           </div>

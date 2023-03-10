@@ -1,5 +1,6 @@
-import { OpenSeaLogo } from 'components/Svgs/OpenSeaLogo';
+import { OpenSeaButtonLink } from 'components/Link/OpenSeaButtonLink';
 import Image from 'next/image';
+import { MARKETPLACE_URLS } from 'utils/constants';
 
 export default function HeroMembership() {
   return (
@@ -18,13 +19,7 @@ export default function HeroMembership() {
           <span className="flex items-center justify-center bg-[#fefaec] text-xs px-3 py-2 rounded-full text-membership">
             Mirage gallery
           </span>
-          <button
-            className="flex items-center justify-center px-6 py-3 text-black duration-300 bg-gray-200 hover:bg-gray-100"
-            type="button"
-          >
-            <OpenSeaLogo className={'mr-2'} />
-            View on Opensea
-          </button>
+          <OpenSeaButtonLink href={MARKETPLACE_URLS.membership} />
         </div>
         <h2 className="text-3xl">Memberships</h2>
         <p>
