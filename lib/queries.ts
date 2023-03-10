@@ -13,7 +13,7 @@ export const dropsHomeHeroQuery = groq`
     "slug": slug.current,
     "cover": sampleImages[0],
     "artists": artists[].name,
-      status
+    status
   } [0...5] | order(_createdAt desc)
 `;
 
