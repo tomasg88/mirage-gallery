@@ -1,6 +1,6 @@
-import HomeHero from 'components/Home/HomeHero';
-import HomeCuratedImages from 'components/Home/HomeCuratedImages';
-import HomeOurDrops from 'components/Home/HomeOurDrops';
+import { HomeHero } from 'components/Home/HomeHero';
+import { HomeCuratedImages } from 'components/Home/HomeCuratedImages';
+import { HomePosters } from 'components/Home/HomePosters';
 import { HeroTitle } from 'components/HeroTitle/HeroTitle';
 import Link from 'next/link';
 import { RightArrow } from 'components/Svgs/RightArrow';
@@ -22,7 +22,7 @@ export default function Home({ drops }: { drops: HomeProps[] }) {
   return (
     <>
       <HomeHero drops={drops} />
-      <HomeOurDrops />
+      <HomePosters />
       <div className="w-full px-2 space-y-64 max-w-screen-2xl">
         <section className="pt-64">
           <HeroTitle accentColor={''} subtitle="What is Mirage?">
