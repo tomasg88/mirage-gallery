@@ -42,6 +42,14 @@ export const curated = defineType({
       validation: (rule) => rule.required(),
     }),
     defineField({
+      description: 'Marketplace URL where users can find this collection',
+      fieldset: 'drop-details',
+      name: 'marketplaceUrl',
+      title: 'Marketplace Url',
+      type: 'string',
+      validation: (rule) => rule.required(),
+    }),
+    defineField({
       fieldset: 'drop-details',
       name: 'video',
       title: 'Drop Video',
