@@ -21,7 +21,7 @@ const CREATORS = [
     total: '8000',
   },
   {
-    name: 'Dallee',
+    name: 'Dalle',
     img: '/assets/3.jpg',
     available: '500',
     total: '8000',
