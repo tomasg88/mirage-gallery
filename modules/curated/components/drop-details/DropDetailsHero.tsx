@@ -1,10 +1,22 @@
-import { OpenSeaLogo } from 'components/Svgs/OpenSeaLogo';
 import { SoldOutSvg } from 'components/Svgs/SoldOutSvg';
 import Image from 'next/image';
 import { Drop } from 'types/drops';
 import { MintStatusText } from 'modules/curated/components/DropsFilter';
+import { OpenSeaButtonLink } from 'components/Link/OpenSeaButtonLink';
 
-export const DropDetailsHero = ({ drop }: { drop: Drop }) => {
+type DropDetailsHeroProps = {
+  description: Drop['description'];
+  marketplaceUrl: Drop['marketplaceUrl'];
+  name: Drop['name'];
+  status: Drop['status'];
+};
+
+export const DropDetailsHero = ({
+  description,
+  marketplaceUrl,
+  name,
+  status,
+}: DropDetailsHeroProps) => {
   return (
     <>
       <div className="w-full h-[500px]">
@@ -24,20 +36,16 @@ export const DropDetailsHero = ({ drop }: { drop: Drop }) => {
         <div className="flex items-center justify-between my-6">
           <span className="flex items-center justify-center px-3 py-2 text-xs text-black bg-gray-200 rounded-full">
             <SoldOutSvg className="mr-2" />
-            {MintStatusText[drop.status]}
+            {MintStatusText[status]}
           </span>
-          <div className="flex justify-end">
-            <button
-              className="flex items-center justify-center py-3 text-black duration-300 bg-gray-200 px-9 hover:bg-gray-100"
-              type="button"
-            >
-              <OpenSeaLogo className="mr-2" />
-              View on Opensea
-            </button>
-          </div>
+          {marketplaceUrl && (
+            <div className="flex justify-end">
+              <OpenSeaButtonLink href={marketplaceUrl} />
+            </div>
+          )}
         </div>
-        <h2 className="text-3xl">{drop.name}</h2>
-        <p className="my-6 md:w-1/2">{drop.description}</p>
+        <h2 className="text-3xl">{name}</h2>
+        <p className="my-6 md:w-1/2">{description}</p>
       </div>
     </>
   );
