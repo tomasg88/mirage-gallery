@@ -73,7 +73,7 @@ export const CuratedArtistForm = (): JSX.Element => {
       className="flex flex-col py-20 mx-auto max-w-screen-2xl"
       id="become-curated-artist"
     >
-      <HeroTitle accentColor={'text-[#920d3d]'} subtitle="Apply">
+      <HeroTitle accentColor={'text-curated'} subtitle="Apply">
         Become a curated artist
       </HeroTitle>
       <div className="grid gap-6 mb-6 md:grid-cols-2">
@@ -196,7 +196,7 @@ export const CuratedArtistForm = (): JSX.Element => {
           </label>
           <div>
             <button
-              className="flex w-56 items-center justify-center py-3 text-white duration-300 bg-[#920d3d] px-9"
+              className="flex items-center justify-center w-56 py-3 text-white duration-300 bg-curated px-9"
               type="submit"
             >
               Apply

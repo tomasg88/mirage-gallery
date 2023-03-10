@@ -36,9 +36,7 @@ export default function SlugPage({ drop }: { drop: Drop }) {
             <Tab as={Fragment} key={title}>
               {({ selected }) => (
                 <button
-                  className={`${
-                    selected ? 'text-[#920D3D]' : ''
-                  } outline-none `}
+                  className={`${selected ? 'text-curated' : ''} outline-none `}
                   type="button"
                 >
                   {title}
