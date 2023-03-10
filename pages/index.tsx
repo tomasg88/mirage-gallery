@@ -5,11 +5,23 @@ import { HeroTitle } from 'components/HeroTitle/HeroTitle';
 import Link from 'next/link';
 import { RightArrow } from 'components/Svgs/RightArrow';
 import { ButtonLink } from 'components/Button/ButtonLink/ButtonLink';
+import { GetServerSideProps, GetServerSidePropsResult } from 'next';
+import { sanityClient } from 'lib/sanity.client';
+import { dropsHomeHeroQuery } from 'lib/queries';
+import { Artist, Drop } from 'types/drops';
 
-export default function Home() {
+export type HomeProps = {
+  _id: Drop['_id'];
+  artists: Artist['name'][];
+  name: Drop['name'];
+  cover: Drop['cover'];
+  slug: Drop['slug'];
+};
+
+export default function Home({ drops }: { drops: HomeProps[] }) {
   return (
     <>
-      <HomeHero />
+      <HomeHero drops={drops} />
       <HomeOurDrops />
       <div className="w-full px-2 space-y-64 max-w-screen-2xl">
         <section className="pt-64">
@@ -139,3 +151,15 @@ export default function Home() {
     </>
   );
 }
+
+export const getServerSideProps: GetServerSideProps = async (): Promise<
+  GetServerSidePropsResult<{ drops: HomeProps[] }>
+> => {
+  const drops = await sanityClient.fetch(dropsHomeHeroQuery);
+
+  return {
+    props: {
+      drops,
+    },
+  };
+};
