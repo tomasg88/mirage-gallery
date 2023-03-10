@@ -34,16 +34,5 @@ Sanity Studio is hosted inside the same project under a specific path.
 * `utils` - contants, routes, JS functions, etc. 
 
 ## Roadmap
-### UI changes
-1. Add artist to the Drop Overlay
-2. Move _Sample Works_ from _The Artist_ to _About the Project_ tab
-3. Parallax effect in /crypto-native
-4. Add trackpad support in Home Carrousel
-
-### Functionality
-* Curated page
-1. Add Claim functionality
-2. Add Mint functionality
-3. Integrate with smart contract to show PreSale or Public Sale
-4. Integrate with smart contract and show remaining artworks to be minted / claim 
+See [Issues](https://github.com/tomasg88/mirage-gallery/issues) tab
 

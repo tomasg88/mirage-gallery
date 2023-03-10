@@ -1,7 +1,7 @@
 .root {
-    @apply inline-flex items-center justify-center;
-  @apply text-sm;
-  @apply px-5 py-2;
+  @apply inline-flex items-center justify-center;
+  @apply text-sm; 
+  @apply px-5 py-2 rounded-full;
   @apply bg-gray-100/80 bg-opacity-90 text-gray-900;
   @apply border-0 outline-none;
   @apply cursor-pointer;
@@ -14,5 +14,5 @@
 }
 
 .active {
-  @apply bg-[#920d3d] text-white;
+  @apply bg-black text-white;
 }

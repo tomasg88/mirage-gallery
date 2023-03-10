@@ -23,6 +23,7 @@ export const curated = defineType({
       name: 'name',
       title: 'Name',
       type: 'string',
+      validation: (rule) => rule.required(),
     }),
     defineField({
       fieldset: 'drop-details',
@@ -30,6 +31,7 @@ export const curated = defineType({
       options: { source: 'name' },
       title: 'Slug',
       type: 'slug',
+      validation: (rule) => rule.required(),
     }),
     defineField({
       description: 'This description will be displayed in the website',
@@ -37,6 +39,15 @@ export const curated = defineType({
       name: 'description',
       title: 'Drop Description',
       type: 'string',
+      validation: (rule) => rule.required(),
+    }),
+    defineField({
+      description: 'Marketplace URL where users can find this collection',
+      fieldset: 'drop-details',
+      name: 'marketplaceUrl',
+      title: 'Marketplace Url',
+      type: 'string',
+      validation: (rule) => rule.required(),
     }),
     defineField({
       fieldset: 'drop-details',
@@ -49,21 +60,32 @@ export const curated = defineType({
       name: 'artists',
       of: [{ type: 'curatedArtist' }],
       type: 'array',
+      validation: (rule) => rule.required().min(1),
     }),
     defineField({
       description: 'Details of the project',
       name: 'project',
       title: 'Project',
       type: 'projectInfo',
+      validation: (rule) => rule.required().error('Load project details'),
     }),
     defineField({
       name: 'sampleImages',
       of: [{ type: 'cloudinary.asset' }],
       title: 'Sample Images',
       type: 'array',
+      validation: (rule) =>
+        rule.required().error('You should load at least 2 art pieces'),
     }),
     defineField({
       fieldset: 'mint-details',
+      name: 'releaseDate',
+      title: 'Release Date',
+      type: 'datetime', // https://www.sanity.io/docs/datetime-type
+    }),
+    defineField({
+      fieldset: 'mint-details',
+      initialValue: 'upcoming',
       name: 'status',
       options: {
         direction: 'horizontal',
@@ -82,24 +104,7 @@ export const curated = defineType({
       name: 'mintPrice',
       title: 'Mint Price',
       type: 'number',
-    }),
-    defineField({
-      fieldset: 'mint-details',
-      name: 'preSaleAmount',
-      title: 'Available pieces for Pre Sale',
-      type: 'number',
-    }),
-    defineField({
-      fieldset: 'mint-details',
-      name: 'publicSaleAmount',
-      title: 'Available pieces for Public Sale',
-      type: 'number',
-    }),
-    defineField({
-      fieldset: 'mint-details',
-      name: 'totalAmount',
-      title: 'Total amount of pieces available',
-      type: 'number',
+      validation: (rule) => rule.required(),
     }),
   ],
   name: 'drop',

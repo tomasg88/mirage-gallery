@@ -33,6 +33,7 @@ export type Drop = {
   preSaleAmount: number;
   project: Project;
   publicSaleAmount: number;
+  releaseDate: string; // "2023-03-10T03:03:00.000Z" - https://www.sanity.io/docs/datetime-type
   sampleImages: CloudinaryAsset[] | null;
   slug: string;
   status: MintStatus;

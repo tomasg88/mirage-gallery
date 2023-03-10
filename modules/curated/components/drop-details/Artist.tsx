@@ -3,7 +3,7 @@ import Image from 'next/image';
 import React from 'react';
 import { Drop } from 'types/drops';
 
-export const Artist = ({ drop }: { drop: Drop }) => {
+export const Artist = ({ artists }: { artists: Drop['artists'] }) => {
   return (
     <div className="px-2 mx-auto max-w-screen-2xl">
       <div className="grid w-full mx-auto my-3 md:grid-cols-2 max-w-screen-2xl">
@@ -16,12 +16,12 @@ export const Artist = ({ drop }: { drop: Drop }) => {
               alt="imagen"
               className="object-cover w-[600px]"
               height={600}
-              src={drop.artists[0].profilePicture.url}
+              src={artists[0].profilePicture.url}
               width={600}
             />
           </div>
-          <h3 className="my-6 text-2xl">{drop.artists[0].name}</h3>
-          <p className="my-6 font-sans">{drop.artists[0].bio}</p>
+          <h3 className="my-6 text-2xl">{artists[0].name}</h3>
+          <p className="my-6 font-sans">{artists[0].bio}</p>
           <div className="flex justify-start gap-6 mt-12">
             <button
               className="flex items-center justify-center py-3 text-black duration-300 bg-gray-200 px-9 hover:bg-gray-100"
@@ -32,7 +32,7 @@ export const Artist = ({ drop }: { drop: Drop }) => {
             </button>
             <a
               className="flex items-center justify-center py-3 text-white duration-300 bg-[#1da1f2] px-9"
-              href={drop.artists[0].twitterUrl}
+              href={artists[0].twitterUrl}
               rel={'noreferrer'}
               target="_blank"
               type="button"

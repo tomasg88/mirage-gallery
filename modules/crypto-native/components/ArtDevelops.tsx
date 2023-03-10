@@ -1,17 +1,29 @@
-import Image from 'next/image';
+const IMAGES = [
+  {
+    url: 'url("/assets/crypto-native/crypto-native-01.jpg")',
+  },
+  {
+    url: 'url("/assets/crypto-native/crypto-native-02.jpg")',
+  },
+  {
+    url: 'url("/assets/crypto-native/crypto-native-03.jpg")',
+  },
+  {
+    url: 'url("/assets/crypto-native/crypto-native-04.jpg")',
+  },
+];
 
 export default function CryptoNativeArtDevelops() {
   return (
-    <div className="py-24">
-      <div className="flex items-center justify-center max-w-3xl mx-auto">
-        <Image
-          alt="imagen"
-          className="object-cover w-full"
-          height={500}
-          src="/assets/crypto-native/cryptonative-1-art.jpg"
-          width={1200}
-        />
-      </div>
+    <div>
+      {IMAGES.map(({ url }) => (
+        <div className="w-full min-h-screen" key={url}>
+          <div
+            className="relative flex items-center justify-center w-full min-h-screen mx-auto bg-fixed bg-center bg-no-repeat md:bg-contain"
+            style={{ backgroundImage: `${url}` }}
+          />
+        </div>
+      ))}
     </div>
   );
 }

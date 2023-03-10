@@ -20,11 +20,11 @@ export default function Home() {
         </section>
         <section>
           <HeroTitle
-            accentColor={'text-[#074f65]'}
+            accentColor={'text-original'}
             subtitle="ALEJANDRO & TAYLOR"
           >
             Mirage Gallery started with creating entirely{' '}
-            <span className="text-[#074f65] underline">
+            <span className="underline text-original">
               A.I. generated artists.
             </span>
           </HeroTitle>
@@ -35,9 +35,9 @@ export default function Home() {
           </p>
         </section>
         <section>
-          <HeroTitle accentColor={'text-[#431281]'} subtitle="CRYPTO NATIVE">
+          <HeroTitle accentColor={'text-native'} subtitle="CRYPTO NATIVE">
             With{' '}
-            <Link className="text-[#431281] underline" href="/crypto-native">
+            <Link className="underline text-native" href="/crypto-native">
               Crypto-Native
             </Link>
             , the artwork evolves when a secondary sale happens.
@@ -53,7 +53,7 @@ export default function Home() {
           </div>
           <div className="flex items-center justify-start mt-6">
             <ButtonLink
-              className="bg-[#431281] flex px-6 py-4 items-center justify-center text-white"
+              className="flex items-center justify-center px-6 py-4 text-white bg-native"
               href="/crypto-native"
               showRightArrow
               text="Explore crypto native"
@@ -61,10 +61,10 @@ export default function Home() {
           </div>
         </section>
         <section>
-          <HeroTitle accentColor={'text-[#920d3d]'} subtitle="CURATED">
+          <HeroTitle accentColor={'text-curated'} subtitle="CURATED">
             Mirage Gallery has now expanded and works with other artists (not
             A.I. generated ones) with{' '}
-            <Link className="text-[#920d3d] underline" href="/curated">
+            <Link className="underline text-curated" href="/curated">
               Mirage Gallery Curated.
             </Link>
           </HeroTitle>
@@ -79,7 +79,7 @@ export default function Home() {
           </div>
           <div className="flex items-center justify-start mt-6">
             <ButtonLink
-              className="bg-[#920d3d] flex px-6 py-4 items-center justify-center text-white"
+              className="flex items-center justify-center px-6 py-4 text-white bg-curated"
               href="/curated"
               showRightArrow
               text="Explore curated"
@@ -87,9 +87,9 @@ export default function Home() {
           </div>
         </section>
         <section>
-          <HeroTitle accentColor={'text-[#1129aa]'} subtitle="Dreamers">
+          <HeroTitle accentColor={'text-dreamers'} subtitle="Dreamers">
             The artistic intersection of humans and artificial intelligence. We
-            are <span className="text-[#1129aa] underline">Dreamers.</span>
+            are <span className="underline text-dreamers">Dreamers.</span>
           </HeroTitle>
           <p className="mx-auto text-lg text-gray-600 md:text-3xl ">
             Each Dreamer is the combination of traditional fine-art, machine
@@ -102,7 +102,7 @@ export default function Home() {
           </div>
           <div className="flex items-center justify-start mt-6">
             <ButtonLink
-              className="bg-[#1129aa] flex px-6 py-4 items-center justify-center text-white"
+              className="flex items-center justify-center px-6 py-4 text-white bg-dreamers"
               href="/dreamers"
               showRightArrow
               text="Explore dreamers"
@@ -110,9 +110,9 @@ export default function Home() {
           </div>
         </section>
         <section>
-          <HeroTitle accentColor={'text-[#e2b310]'} subtitle="Memberships">
+          <HeroTitle accentColor={'text-membership'} subtitle="Memberships">
             Mirage Gallery also offers{' '}
-            <span className="text-[#e2b310] underline">Memberships</span> which
+            <span className="underline text-membership">Memberships</span> which
             give early access to curated drops, and more.
           </HeroTitle>
           <div className="grid gap-12 md:grid-cols-2">
@@ -127,7 +127,7 @@ export default function Home() {
           </div>
           <div className="flex items-center justify-start mt-12 mb-32">
             <Link
-              className="bg-[#e2b310] flex px-6 py-4 items-center justify-center"
+              className="flex items-center justify-center px-6 py-4 bg-membership"
               href="/membership"
             >
               Explore memberships
