@@ -3,13 +3,13 @@ import { HeroTitle } from 'components/HeroTitle/HeroTitle';
 export default function TokenDistribution() {
   return (
     <div className="relative py-24">
-      <HeroTitle accentColor={'text-[#431281]'} subtitle="Token distribution">
+      <HeroTitle accentColor={'text-native'} subtitle="Token distribution">
         How we distribute the tokens
       </HeroTitle>
       <div className="grid gap-6 md:grid-cols-4">
         {TOKENS.map((token) => (
           <div className="" key={token.id}>
-            <h4 className="text-[#431281] my-3 text-sm">{token.title}</h4>
+            <h4 className="my-3 text-sm text-native">{token.title}</h4>
             <p className="font-sans text-base">{token.description}</p>
           </div>
         ))}

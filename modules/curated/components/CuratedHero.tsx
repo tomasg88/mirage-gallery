@@ -12,10 +12,10 @@ export default function CuratedHero() {
     >
       <div className="grid w-full gap-6 px-2 mx-auto md:grid-cols-2 max-w-screen-2xl">
         <div className="grid w-full mt-16">
-          <span className="text-sm uppercase text-[#920d3d]">CURATED</span>
+          <span className="text-sm uppercase text-curated">CURATED</span>
           <h1 className="mt-6 text-3xl lg:text-7xl">
             Innovative AI artwork,{' '}
-            <span className="text-[#920d3d]">from a variety of artists.</span>
+            <span className="text-curated">from a variety of artists.</span>
           </h1>
           <p className="py-4">
             Mirage Gallery was founded on the premise that art can be more than
@@ -29,7 +29,7 @@ export default function CuratedHero() {
               Become a curated artist
             </a>
             <button
-              className="bg-[#920d3d] flex justify-center items-center text-white py-3"
+              className="flex items-center justify-center py-3 text-white bg-curated"
               type="button"
             >
               Mint
