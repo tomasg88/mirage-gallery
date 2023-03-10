@@ -1,6 +1,7 @@
-import { OpenSeaLogo } from 'components/Svgs/OpenSeaLogo';
+import { OpenSeaButtonLink } from 'components/Link/OpenSeaButtonLink';
 import { SquaresSvg } from 'components/Svgs/SquareSvg';
 import Image from 'next/image';
+import { MARKETPLACE_URLS } from 'utils/constants';
 
 export default function DreamersCollectionBetterWorldHero() {
   return (
@@ -21,12 +22,7 @@ export default function DreamersCollectionBetterWorldHero() {
             Must hold a Dreamer
           </span>
           {/* TODO - review hover and adjust icon */}
-          <button className="btn" type="button">
-            <div>
-              <OpenSeaLogo className="mr-2" />
-            </div>
-            View on Opensea
-          </button>
+          <OpenSeaButtonLink href={MARKETPLACE_URLS.dreamingOfABetterWorld} />
         </div>
         <h2 className="text-3xl">Dreaming of a better world.</h2>
         <p>A monthly contest with art submitted by Dreamers holders.</p>
