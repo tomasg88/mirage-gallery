@@ -32,6 +32,6 @@ export const dropBySlugQuery = groq`
   *[_type == "drop" && slug.current == $slug][0]
 `;
 
-export const collectionsQuery = groq`
-  *[_type == "alejandro-and-taylor-collections"]
+export const alejandroAndTaylorCollectionsQuery = groq`
+  *[_type == "alejandro-and-taylor-collections" && artist == $artist] | order(collectionNumber asc)
 `;

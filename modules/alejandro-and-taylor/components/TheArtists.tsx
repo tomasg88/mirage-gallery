@@ -1,5 +1,6 @@
 import Image from 'next/image';
 import Link from 'next/link';
+import { ALEJANDRO_PAGE, TAYLOR_PAGE } from 'utils/routes';
 
 const ALEJANDRO_COVER =
   'https://res.cloudinary.com/do1gnj1vn/image/upload/v1678398974/Alejandro%20and%20Taylor/Alejandro/artist2_photos_v2_x4_zqmpvm.jpg';
@@ -14,7 +15,7 @@ export default function TheArtists() {
         <h2 className="my-6 text-2xl">The Artists</h2>
       </div>
       <div className="grid grid-cols-2 gap-3 mx-auto max-w-screen-2xl">
-        <Link className="relative" href="/alejandro-and-taylor/alejandro">
+        <Link className="relative" href={ALEJANDRO_PAGE}>
           <div className="relative z-0 overflow-hidden h-[600px]">
             <Image
               alt="imagen"
@@ -28,7 +29,7 @@ export default function TheArtists() {
             Alejandro
           </h2>
         </Link>
-        <Link className="relative" href="/alejandro-and-taylor/alejandro">
+        <Link className="relative" href={TAYLOR_PAGE}>
           <div className="relative z-0 overflow-hidden h-[600px]">
             <Image
               alt="imagen"

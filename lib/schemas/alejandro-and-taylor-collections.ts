@@ -3,6 +3,20 @@ import { defineField, defineType } from 'sanity';
 export const alejandroAndTaylorCollections = defineType({
   fields: [
     defineField({
+      name: 'artist',
+      options: {
+        direction: 'horizontal',
+        layout: 'radio',
+        list: [
+          { value: 'alejandro', title: 'Alejandro' },
+          { value: 'taylor', title: 'Taylor' },
+        ],
+      },
+      title: 'Choose the artist',
+      type: 'string',
+      validation: (rule) => rule.required(),
+    }),
+    defineField({
       name: 'collectionNumber',
       title: 'Collection Number',
       type: 'number',
@@ -24,6 +38,12 @@ export const alejandroAndTaylorCollections = defineType({
     }),
   ],
   name: 'alejandro-and-taylor-collections',
+  preview: {
+    select: {
+      title: 'collectionName',
+      subtitle: 'artist',
+    },
+  },
   title: 'Alejandro & Taylor Collections',
   type: 'document',
 });
