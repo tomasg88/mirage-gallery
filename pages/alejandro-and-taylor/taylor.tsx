@@ -1,5 +1,4 @@
 import Image from 'next/image';
-import AlejandroHero from 'modules/alejandro-and-taylor/components/AlejandroHero';
 import { GetStaticProps, GetStaticPropsResult } from 'next';
 import { AlejandroAndTaylorCollection } from 'types/alejandroAndTaylorCollections';
 import { sanityClient } from 'lib/sanity.client';
@@ -8,9 +7,9 @@ import { useCallback, useState } from 'react';
 import { OpenSeaButtonLink } from 'components/Link/OpenSeaButtonLink';
 import { MARKETPLACE_URLS } from 'utils/constants';
 
-const ARTIST_NAME = 'alejandro';
+const ARTIST_NAME = 'taylor';
 
-export default function AlejandroPage({
+export default function TaylorPage({
   collections,
 }: {
   collections: AlejandroAndTaylorCollection[];
@@ -29,7 +28,6 @@ export default function AlejandroPage({
 
   return (
     <div className="w-full pb-24">
-      <AlejandroHero />
       <div className="my-20 border-b border-gray-300">
         <div className="flex items-center justify-start gap-12 px-2 py-3 mx-auto max-w-screen-2xl">
           {collections.map(({ collectionNumber }, index) => (
