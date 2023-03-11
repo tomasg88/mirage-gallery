@@ -1,6 +1,6 @@
 import { MARKETPLACE_URLS } from 'utils/constants';
 
-export default function MembershipViewOrClaim() {
+export const ViewOrClaim = () => {
   return (
     <>
       <div className="py-24">
@@ -32,4 +32,4 @@ export default function MembershipViewOrClaim() {
       </div>
     </>
   );
-}
+};

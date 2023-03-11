@@ -2,7 +2,7 @@ import { OpenSeaButtonLink } from 'components/Link/OpenSeaButtonLink';
 import Image from 'next/image';
 import { MARKETPLACE_URLS } from 'utils/constants';
 
-export default function HeroMembership() {
+export const HeroMembership = () => {
   return (
     <>
       <div className="w-full h-[500px]">
@@ -29,4 +29,4 @@ export default function HeroMembership() {
       </div>
     </>
   );
-}
+};
