@@ -27,7 +27,7 @@ export const ArtistDetails = ({
         <h3 className="my-6 text-2xl">{artist.name}</h3>
         <p className="my-6 font-sans">{artist.bio}</p>
         <div className="flex justify-start gap-6 mt-12">
-          {marketplaceUrl !== '' && <OpenSeaButtonLink href={marketplaceUrl} />}
+          {marketplaceUrl && <OpenSeaButtonLink href={marketplaceUrl} />}
           <a
             className="flex items-center justify-center py-3 text-white duration-300 bg-[#1da1f2] px-9"
             href={artist.twitterUrl}

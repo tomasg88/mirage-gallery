@@ -32,3 +32,7 @@ export const ROUTES = [
 ];
 
 export const CURATED_DROP_DETAILS = '/curated/drop';
+
+export const DREAMERS_8000_DREAMERS = '/dreamers/8000-dreamers';
+export const DREAMERS_DREAMING_OF_A_BETTER_WORLD =
+  '/dreamers/dreaming-a-better-world';

@@ -20,7 +20,7 @@ export const alejandroAndTaylorCollections = defineType({
       of: [{ type: 'collectionImage' }],
       title: 'Images',
       type: 'array',
-      validation: (rule) => rule.required().min(3).max(8),
+      validation: (rule) => rule.required().min(3).max(24),
     }),
   ],
   name: 'alejandro-and-taylor-collections',

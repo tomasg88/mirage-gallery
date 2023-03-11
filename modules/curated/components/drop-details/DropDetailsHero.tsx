@@ -3,8 +3,10 @@ import Image from 'next/image';
 import { Drop } from 'types/drops';
 import { MintStatusText } from 'modules/curated/components/DropsFilter';
 import { OpenSeaButtonLink } from 'components/Link/OpenSeaButtonLink';
+import { CloudinaryAsset } from 'types/cloudinary';
 
 type DropDetailsHeroProps = {
+  cover: CloudinaryAsset;
   description: Drop['description'];
   marketplaceUrl: Drop['marketplaceUrl'];
   name: Drop['name'];
@@ -12,6 +14,7 @@ type DropDetailsHeroProps = {
 };
 
 export const DropDetailsHero = ({
+  cover,
   description,
   marketplaceUrl,
   name,
@@ -27,7 +30,7 @@ export const DropDetailsHero = ({
             alt="imagen"
             className="object-cover w-full h-[500px]"
             height={600}
-            src="/assets/11.jpg"
+            src={cover.url}
             width={1600}
           />
         </div>
