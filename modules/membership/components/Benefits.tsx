@@ -1,6 +1,6 @@
 import { HeroTitle } from 'components/HeroTitle/HeroTitle';
 
-export default function MembershipBenefits() {
+export const Benefits = () => {
   return (
     <>
       <div className="py-20 ">
@@ -42,4 +42,4 @@ export default function MembershipBenefits() {
       </div>
     </>
   );
-}
+};

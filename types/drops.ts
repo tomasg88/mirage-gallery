@@ -1,6 +1,6 @@
 import { CloudinaryAsset } from './cloudinary';
 
-type Artist = {
+export type Artist = {
   _key: string;
   name: string;
   bio: string;
@@ -28,13 +28,14 @@ export type Drop = {
   artists: Artist[];
   cover: CloudinaryAsset | null; // This is the same sampleImages[0].url
   description: string;
+  marketplaceUrl: string;
   mintPrice: number;
   name: string;
   preSaleAmount: number;
   project: Project;
   publicSaleAmount: number;
   releaseDate: string; // "2023-03-10T03:03:00.000Z" - https://www.sanity.io/docs/datetime-type
-  sampleImages: CloudinaryAsset[] | null;
+  sampleImages: CloudinaryAsset[];
   slug: string;
   status: MintStatus;
   totalAmount: number;

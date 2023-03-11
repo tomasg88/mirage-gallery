@@ -1,7 +1,8 @@
-import { OpenSeaLogo } from 'components/Svgs/OpenSeaLogo';
 import { FilterButton } from 'components/Button/FilterButton/FilterButton';
 import { Dispatch, SetStateAction } from 'react';
 import { MintStatus } from 'types/drops';
+import { MARKETPLACE_URLS } from 'utils/constants';
+import { OpenSeaButtonLink } from 'components/Link/OpenSeaButtonLink';
 
 type DropsFilterProps = {
   selectedFilter: MintStatus;
@@ -33,12 +34,7 @@ export default function DropsFilter({
           </FilterButton>
         ))}
         <div className="h-full border-r border-gray-300" />
-        <FilterButton>
-          <div>
-            <OpenSeaLogo className="mr-2" />
-          </div>
-          View on Opensea
-        </FilterButton>
+        <OpenSeaButtonLink href={MARKETPLACE_URLS.curated} rounded />
       </div>
     </div>
   );
