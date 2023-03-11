@@ -14,3 +14,23 @@ export type GeneralModulesInfo = {
     samples: string[];
   };
 };
+
+export enum MembershipTiers {
+  INTELLIGENT = 'intelligent',
+  SENTIENT = 'sentient',
+}
+
+export type MembershipModuleInfo = {
+  ctaButton: string;
+  href: string;
+  tiers: {
+    [key in MembershipTiers]: MembershipTierInfo;
+  };
+};
+
+export type MembershipTierInfo = {
+  benefits: string[];
+  image: string;
+  imageAlt: string;
+  name: string;
+};

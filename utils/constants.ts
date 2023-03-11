@@ -1,4 +1,4 @@
-import { GeneralModulesInfo, Modules } from 'types/main';
+import { GeneralModulesInfo, MembershipModuleInfo, Modules } from 'types/main';
 
 // These urls are the same for the entire projects
 // Only dynamic that comes from CMS is in the Drops model, [slug].tsx page
@@ -87,5 +87,24 @@ export const HOME_INFO_BY_MODULE: GeneralModulesInfo = {
       'https://res.cloudinary.com/do1gnj1vn/image/upload/v1678493522/Dreamers/Samples/wheatatreat_40_mvs4jk.jpg',
       'https://res.cloudinary.com/do1gnj1vn/image/upload/v1678493522/Dreamers/Samples/wheatatreat_25_j8obck.jpg',
     ],
+  },
+};
+
+export const MEMBERSHIP_MODULE_INFO: MembershipModuleInfo = {
+  ctaButton: 'Explore memberships',
+  href: '/membership',
+  tiers: {
+    intelligent: {
+      benefits: ['M.G. Curated Early Mint'],
+      image: '/assets/membership/membership-card-intelligent.jpg',
+      imageAlt: 'Intelligent Member Card image',
+      name: 'Intelligent Member',
+    },
+    sentient: {
+      benefits: ['M.G. Curated Early Mint', 'M.G. Curated Free Claim'],
+      image: '/assets/membership/membership-card-sentient.jpg',
+      imageAlt: 'Sentient Member Card image',
+      name: 'Sentient Member',
+    },
   },
 };
