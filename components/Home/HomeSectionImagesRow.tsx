@@ -2,17 +2,11 @@ import Image from 'next/image';
 // Import Swiper styles
 import 'swiper/css';
 import 'swiper/css/navigation';
-import { Modules } from 'types/main';
-import { HOME_IMAGES_BY_MODULE } from 'utils/constants';
 
-type HomeSectionImagesRowProps = {
-  module: Modules;
-};
-
-export const HomeSectionImagesRow = ({ module }: HomeSectionImagesRowProps) => {
+export const HomeSectionImagesRow = ({ samples }: { samples: string[] }) => {
   return (
     <div className="grid h-64 grid-cols-10 my-6 overflow-hidden">
-      {HOME_IMAGES_BY_MODULE[module].map((image, i) => (
+      {samples.map((image, i) => (
         <div className="w-full h-64 overflow-hidden" key={`${image}-${i}`}>
           <Image
             alt="alt"
