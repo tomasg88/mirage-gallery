@@ -5,11 +5,11 @@ import 'swiper/css/navigation';
 import { Modules } from 'types/main';
 import { HOME_IMAGES_BY_MODULE } from 'utils/constants';
 
-type HomeSectionImagesRow = {
+type HomeSectionImagesRowProps = {
   module: Modules;
 };
 
-export const HomeCuratedImages = ({ module }: HomeSectionImagesRow) => {
+export const HomeSectionImagesRow = ({ module }: HomeSectionImagesRowProps) => {
   return (
     <div className="grid h-64 grid-cols-10 my-6 overflow-hidden">
       {HOME_IMAGES_BY_MODULE[module].map((image, i) => (
@@ -19,7 +19,7 @@ export const HomeCuratedImages = ({ module }: HomeSectionImagesRow) => {
             className="object-cover w-full h-64"
             height={900}
             quality={100}
-            src={`/assets/${image}`}
+            src={image}
             width={1200}
           />
         </div>

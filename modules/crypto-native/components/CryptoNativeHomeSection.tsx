@@ -1,6 +1,6 @@
 import { ButtonLink } from 'components/Button/ButtonLink/ButtonLink';
 import { HeroTitle } from 'components/HeroTitle/HeroTitle';
-import { HomeCuratedImages } from 'components/Home/HomeSectionImagesRow';
+import { HomeSectionImagesRow } from 'components/Home/HomeSectionImagesRow';
 import Link from 'next/link';
 import React from 'react';
 import { Modules } from 'types/main';
@@ -22,7 +22,7 @@ export const CryptoNativeHomeSection = () => {
       <div className="relative">
         <div className="absolute top-0 bottom-0 left-0 w-96 bg-gradient-to-r from-white via-white/30 to-transparent" />
         <div className="absolute top-0 bottom-0 right-0 w-96 bg-gradient-to-l from-white via-white/30 to-transparent" />
-        <HomeCuratedImages module={Modules.CRYPTO_NATIVE} />
+        <HomeSectionImagesRow module={Modules.CRYPTO_NATIVE} />
       </div>
       <div className="flex items-center justify-start mt-6">
         <ButtonLink
