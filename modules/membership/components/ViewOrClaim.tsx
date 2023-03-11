@@ -1,4 +1,6 @@
-export default function MembershipViewOrClaim() {
+import { MARKETPLACE_URLS } from 'utils/constants';
+
+export const ViewOrClaim = () => {
   return (
     <>
       <div className="py-24">
@@ -11,7 +13,12 @@ export default function MembershipViewOrClaim() {
                 on the secondary market.
               </p>
             </div>
-            <a className="text-3xl" href="" target="_blank">
+            <a
+              className="text-3xl"
+              href={MARKETPLACE_URLS.membership}
+              rel="noreferrer"
+              target="_blank"
+            >
               View on opensea
             </a>
           </div>
@@ -25,4 +32,4 @@ export default function MembershipViewOrClaim() {
       </div>
     </>
   );
-}
+};

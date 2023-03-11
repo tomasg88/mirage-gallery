@@ -5,7 +5,7 @@ import { Drop } from 'types/drops';
 import { GetServerSideProps, GetServerSidePropsResult } from 'next';
 import { Tab } from '@headlessui/react';
 import { AboutTheProject } from 'modules/curated/components/drop-details/AboutTheProject';
-import { Artist } from 'modules/curated/components/drop-details/Artist';
+import { ArtistsTab } from 'modules/curated/components/drop-details/ArtistTab';
 import { Claim } from 'modules/curated/components/drop-details/Claim';
 import { Mint } from 'modules/curated/components/drop-details/Mint';
 import { Fragment } from 'react';
@@ -26,10 +26,27 @@ const TABS = [
 ];
 
 export default function SlugPage({ drop }: { drop: Drop }) {
-  const { artists, project, releaseDate, video } = drop;
+  const {
+    artists,
+    description,
+    marketplaceUrl,
+    name,
+    project,
+    releaseDate,
+    sampleImages,
+    status,
+    video,
+  } = drop;
+
   return (
     <div className="w-full pb-24">
-      <DropDetailsHero drop={drop} />
+      <DropDetailsHero
+        cover={sampleImages[0]}
+        description={description}
+        marketplaceUrl={marketplaceUrl}
+        name={name}
+        status={status}
+      />
       <Tab.Group defaultIndex={0}>
         <Tab.List className="flex items-center justify-start gap-6 px-2 py-3 mx-auto text-xs border-b md:text-base md:gap-12 max-w-screen-2xl">
           {TABS.map(({ title }) => (
@@ -54,7 +71,7 @@ export default function SlugPage({ drop }: { drop: Drop }) {
             />
           </Tab.Panel>
           <Tab.Panel>
-            <Artist artists={artists} />
+            <ArtistsTab artists={artists} marketplaceUrl={marketplaceUrl} />
           </Tab.Panel>
           <Tab.Panel>
             <Claim />
