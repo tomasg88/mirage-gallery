@@ -15,7 +15,7 @@ const CREATORS = [
     img: 'https://res.cloudinary.com/do1gnj1vn/image/upload/v1678398607/Dreamers/model2_grid_qikt64.jpg',
   },
   {
-    name: 'Dallee',
+    name: 'Dalle',
     img: 'https://res.cloudinary.com/do1gnj1vn/image/upload/v1678398607/Dreamers/dalle_grid_mvjksd.jpg',
   },
   {

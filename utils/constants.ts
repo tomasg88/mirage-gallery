@@ -108,3 +108,10 @@ export const MEMBERSHIP_MODULE_INFO: MembershipModuleInfo = {
     },
   },
 };
+
+export const DREAMERS_COVERS = {
+  dreamers:
+    'https://res.cloudinary.com/do1gnj1vn/image/upload/v1678398607/Dreamers/model1_grid_rk0ujr.jpg',
+  dreamingOfABetterWorld:
+    'https://res.cloudinary.com/do1gnj1vn/image/upload/v1678399163/Dreamers/dreaming_of_a_better_world_poster.jpg',
+};

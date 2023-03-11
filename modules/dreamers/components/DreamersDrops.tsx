@@ -1,5 +1,6 @@
 import Image from 'next/image';
 import Link from 'next/link';
+import { DREAMERS_COVERS } from 'utils/constants';
 import {
   DREAMERS_8000_DREAMERS,
   DREAMERS_DREAMING_OF_A_BETTER_WORLD,
@@ -17,7 +18,7 @@ export default function DreamersDrops() {
               alt="imagen"
               className="object-cover w-full h-[500px]"
               height={500}
-              src="/assets/1.jpg"
+              src={DREAMERS_COVERS.dreamers}
               width={600}
             />
           </div>
@@ -31,9 +32,7 @@ export default function DreamersDrops() {
               alt="imagen"
               className="object-cover w-full h-[500px]"
               height={500}
-              src={
-                'https://res.cloudinary.com/do1gnj1vn/image/upload/v1678399163/Dreamers/dreaming_of_a_better_world_poster.jpg'
-              }
+              src={DREAMERS_COVERS.dreamingOfABetterWorld}
               width={600}
             />
           </div>
