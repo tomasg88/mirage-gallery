@@ -4,3 +4,13 @@ export enum Modules {
   CRYPTO_NATIVE = 'crypto-native',
   DREAMERS = 'dreamers',
 }
+
+export type GeneralModulesInfo = {
+  [key in Modules]: {
+    ctaButton: string;
+    name: string;
+    href: string;
+    paragraph: string;
+    samples: string[];
+  };
+};
