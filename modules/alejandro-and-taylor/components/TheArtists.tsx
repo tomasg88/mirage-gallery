@@ -1,5 +1,12 @@
 import Image from 'next/image';
 import Link from 'next/link';
+
+const ALEJANDRO_COVER =
+  'https://res.cloudinary.com/do1gnj1vn/image/upload/v1678398974/Alejandro%20and%20Taylor/Alejandro/artist2_photos_v2_x4_zqmpvm.jpg';
+
+const TAYLOR_COVER =
+  'https://res.cloudinary.com/do1gnj1vn/image/upload/v1678398975/Alejandro%20and%20Taylor/Taylor/artist3_photos_v2_x4_d15kcs.jpg';
+
 export default function TheArtists() {
   return (
     <div>
@@ -13,7 +20,7 @@ export default function TheArtists() {
               alt="imagen"
               className="object-cover w-full h-[600px]"
               height={500}
-              src="/assets/alejandrotaylor/alejandro.jpg"
+              src={ALEJANDRO_COVER}
               width={600}
             />
           </div>
@@ -27,7 +34,7 @@ export default function TheArtists() {
               alt="imagen"
               className="object-cover w-full h-[600px]"
               height={500}
-              src="/assets/alejandrotaylor/taylor.jpg"
+              src={TAYLOR_COVER}
               width={600}
             />
           </div>
