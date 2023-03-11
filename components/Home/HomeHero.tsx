@@ -38,8 +38,8 @@ export const HomeHero = ({ drops }: { drops: HomeProps[] }) => {
           slidesPerView={1}
           spaceBetween={50}
         >
-          {drops.map((drop) => (
-            <SwiperSlide key={drop?._id}>
+          {drops.map((drop, index) => (
+            <SwiperSlide key={`${drop?._id}-${index}`}>
               <div className="overflow-hidden">
                 <div className="h-64 md:h-[500px] overflow-hidden w-full">
                   {drop.cover && (
