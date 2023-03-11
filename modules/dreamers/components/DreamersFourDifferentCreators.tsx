@@ -3,34 +3,24 @@ import Image from 'next/image';
 type Creator = {
   name: string;
   img: string;
-  available: string;
-  total: string;
 };
 
 const CREATORS = [
   {
     name: 'Model 1',
-    img: '/assets/1.jpg',
-    available: '1500',
-    total: '8000',
+    img: 'https://res.cloudinary.com/do1gnj1vn/image/upload/v1678398607/Dreamers/model1_grid_rk0ujr.jpg',
   },
   {
     name: 'Model 2',
-    img: '/assets/2.jpg',
-    available: '5875',
-    total: '8000',
+    img: 'https://res.cloudinary.com/do1gnj1vn/image/upload/v1678398607/Dreamers/model2_grid_qikt64.jpg',
   },
   {
     name: 'Dallee',
-    img: '/assets/3.jpg',
-    available: '500',
-    total: '8000',
+    img: 'https://res.cloudinary.com/do1gnj1vn/image/upload/v1678398607/Dreamers/dalle_grid_mvjksd.jpg',
   },
   {
     name: '@wheattreat',
-    img: '/assets/4.jpg',
-    available: '100',
-    total: '8000',
+    img: 'https://res.cloudinary.com/do1gnj1vn/image/upload/v1678398607/Dreamers/wheatatreat_grid_hwggxy.jpg',
   },
 ];
 
@@ -45,7 +35,7 @@ export default function DreamersFourDifferentCreators() {
           <div className="relative" key={creator.name}>
             <div className="relative z-0 overflow-hidden aspect-square">
               <Image
-                alt="imagen"
+                alt={`${creator.name} cover`}
                 className="object-cover w-full h-[500px]"
                 height={500}
                 src={`${creator.img}`}
@@ -53,10 +43,6 @@ export default function DreamersFourDifferentCreators() {
               />
             </div>
             <h2 className="w-full py-3 text-xl">{creator.name}</h2>
-            <span className="text-xs">
-              {creator.available}{' '}
-              <span className="text-gray-600">/ {creator.total}</span>
-            </span>
           </div>
         ))}
       </div>
