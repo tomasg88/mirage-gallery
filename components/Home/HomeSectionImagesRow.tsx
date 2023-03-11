@@ -1,7 +1,4 @@
 import Image from 'next/image';
-// Import Swiper styles
-import 'swiper/css';
-import 'swiper/css/navigation';
 
 export const HomeSectionImagesRow = ({ samples }: { samples: string[] }) => {
   return (
