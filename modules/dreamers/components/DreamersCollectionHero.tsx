@@ -1,6 +1,7 @@
+import { OpenSeaButtonLink } from 'components/Link/OpenSeaButtonLink';
 import { MintingClosedSvg } from 'components/Svgs/MintingClosedSvg';
-import { OpenSeaLogo } from 'components/Svgs/OpenSeaLogo';
 import Image from 'next/image';
+import { MARKETPLACE_URLS } from 'utils/constants';
 
 export default function DreamersCollectionHero() {
   return (
@@ -20,13 +21,7 @@ export default function DreamersCollectionHero() {
             <MintingClosedSvg className="mr-2" />
             Minting Closed
           </span>
-          {/* TODO - review hover and adjust icon */}
-          <button className="btn" type="button">
-            <div>
-              <OpenSeaLogo className="mr-2" />
-            </div>
-            View on Opensea
-          </button>
+          <OpenSeaButtonLink href={MARKETPLACE_URLS.dreamers} />
         </div>
         <h2 className="text-3xl">8,000 Dreamers</h2>
         <p>

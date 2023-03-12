@@ -10,7 +10,15 @@ module.exports = {
       base: ['Unbounded', 'mono'],
       sans: ['Verdana', 'sans'],
     },
-    extend: {},
+    extend: {
+      colors: {
+        original: '#074F65',
+        curated: '#920D3D',
+        dreamers: '#1129AA',
+        native: '#431281',
+        membership: '#E2B310',
+      },
+    },
   },
   plugins: [],
 };

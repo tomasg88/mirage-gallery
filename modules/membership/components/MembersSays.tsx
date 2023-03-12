@@ -1,6 +1,6 @@
 import Image from 'next/image';
 
-export default function MembersSays() {
+export const MembersSays = () => {
   return (
     <>
       <div className="py-20 ">
@@ -56,4 +56,4 @@ export default function MembersSays() {
       </div>
     </>
   );
-}
+};

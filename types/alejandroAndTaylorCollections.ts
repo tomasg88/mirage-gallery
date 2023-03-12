@@ -9,5 +9,4 @@ export type AlejandroAndTaylorCollection = {
   collectionNumber: number;
   collectionName: string;
   images: CollectionImage[];
-  openSeaUrl: string;
 };

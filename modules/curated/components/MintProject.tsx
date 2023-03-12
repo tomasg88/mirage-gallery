@@ -8,7 +8,7 @@ export default function MintProject() {
       className="flex flex-col py-20 mx-auto max-w-screen-2xl"
       id="become-curated-artist"
     >
-      <HeroTitle accentColor={'text-[#920d3d]'} subtitle="Mint">
+      <HeroTitle accentColor={'text-curated'} subtitle="Mint">
         Enters details below
       </HeroTitle>
       <h3 className="my-6 font-sans font-bold">Select project</h3>
@@ -44,7 +44,7 @@ export default function MintProject() {
         </span>
         <div>
           <button
-            className="flex w-56 items-center justify-center py-3 text-white duration-300 bg-[#920d3d] px-9"
+            className="flex items-center justify-center w-56 py-3 text-white duration-300 bg-curated px-9"
             type="button"
           >
             Mint

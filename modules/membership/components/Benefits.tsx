@@ -1,10 +1,10 @@
 import { HeroTitle } from 'components/HeroTitle/HeroTitle';
 
-export default function MembershipBenefits() {
+export const Benefits = () => {
   return (
     <>
       <div className="py-20 ">
-        <HeroTitle accentColor={'text-[#e2b310]'} subtitle="Benefits">
+        <HeroTitle accentColor={'text-membership'} subtitle="Benefits">
           These membership tokens allow:
         </HeroTitle>
         <ul className="flex flex-col space-y-4 text-xl md:w-1/2">
@@ -33,13 +33,13 @@ export default function MembershipBenefits() {
               4
             </span>
             <p className="w-full">
-              <span className="text-[#e2b310]">Sentient members</span> will even
-              get to claim 1 free piece from every MG Curated drop at any point
-              in time!
+              <span className="text-membership">Sentient members</span> will
+              even get to claim 1 free piece from every MG Curated drop at any
+              point in time!
             </p>
           </li>
         </ul>
       </div>
     </>
   );
-}
+};

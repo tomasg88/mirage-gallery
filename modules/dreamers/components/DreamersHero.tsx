@@ -1,4 +1,5 @@
-import { OpenSeaLogo } from 'components/Svgs/OpenSeaLogo';
+import { OpenSeaButtonLink } from 'components/Link/OpenSeaButtonLink';
+import { MARKETPLACE_URLS } from 'utils/constants';
 
 export default function DreamersHero() {
   return (
@@ -12,7 +13,7 @@ export default function DreamersHero() {
     >
       <div className="grid w-full grid-cols-2 gap-6 px-6 mx-auto max-w-screen-2xl">
         <div className="grid w-full mt-16">
-          <span className="text-sm uppercase text-[#1129aa]">DREAMERS</span>
+          <span className="text-sm uppercase text-dreamers">DREAMERS</span>
           <h1 className="mt-6 text-3xl lg:text-7xl">
             The artistic intersection of humans and artificial intelligence.
           </h1>
@@ -21,13 +22,7 @@ export default function DreamersHero() {
             human.
           </p>
           <div className="flex justify-start">
-            <button
-              className="flex items-center justify-center py-3 text-black duration-300 bg-gray-200 px-9 hover:bg-gray-100"
-              type="button"
-            >
-              <OpenSeaLogo className="mr-2" />
-              View on Opensea
-            </button>
+            <OpenSeaButtonLink href={MARKETPLACE_URLS.dreamers} />
           </div>
         </div>
       </div>

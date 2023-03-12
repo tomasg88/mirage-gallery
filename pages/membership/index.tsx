@@ -1,8 +1,8 @@
-import MembershipBenefits from 'modules/membership/components/Benefits';
-import HeroMembership from 'modules/membership/components/HeroMembership';
-import MembersSays from 'modules/membership/components/MembersSays';
-import Tiers from 'modules/membership/components/Tiers';
-import ViewOrClaim from 'modules/membership/components/ViewOrClaim';
+import { Benefits } from 'modules/membership/components/Benefits';
+import { HeroMembership } from 'modules/membership/components/HeroMembership';
+import { MembersSays } from 'modules/membership/components/MembersSays';
+import { Tiers } from 'modules/membership/components/Tiers';
+import { ViewOrClaim } from 'modules/membership/components/ViewOrClaim';
 import { Fragment } from 'react';
 import { Tab } from '@headlessui/react';
 import MembershipSentientClaim from 'modules/membership/components/SentientClaim';
@@ -44,7 +44,7 @@ export default function MembershipPage() {
             <div className="px-2 mx-auto max-w-screen-2xl">
               <ViewOrClaim />
               <Tiers />
-              <MembershipBenefits />
+              <Benefits />
               <MembersSays />
             </div>
           </Tab.Panel>

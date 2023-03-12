@@ -1,5 +1,6 @@
-import { OpenSeaLogo } from 'components/Svgs/OpenSeaLogo';
+import { OpenSeaButtonLink } from 'components/Link/OpenSeaButtonLink';
 import { RightArrow } from 'components/Svgs/RightArrow';
+import { MARKETPLACE_URLS } from 'utils/constants';
 
 export default function HeroAlejandroTaylor() {
   return (
@@ -14,7 +15,7 @@ export default function HeroAlejandroTaylor() {
     >
       <div className="grid w-full grid-cols-2 gap-6 px-6 mx-auto max-w-screen-2xl">
         <div className="grid w-full mt-16">
-          <span className="text-sm uppercase text-[#074F65]">
+          <span className="text-sm uppercase text-original">
             Alejandro & Taylor
           </span>
           <h1 className="mt-6 text-3xl lg:text-7xl">
@@ -25,15 +26,9 @@ export default function HeroAlejandroTaylor() {
             human.
           </p>
           <div className="grid max-w-xl gap-3 sm:grid-cols-2">
+            <OpenSeaButtonLink href={MARKETPLACE_URLS.alejandroAndTaylor} />
             <button
-              className="flex items-center justify-center py-3 text-black duration-300 bg-gray-200 px-9 hover:bg-gray-100"
-              type="button"
-            >
-              <OpenSeaLogo className="mr-2" />
-              View on Opensea
-            </button>
-            <button
-              className="bg-[#074F65] flex justify-center items-center text-white py-3"
+              className="flex items-center justify-center py-3 text-white bg-original"
               type="button"
             >
               Dashboard

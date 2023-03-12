@@ -1,6 +1,7 @@
-import { OpenSeaLogo } from 'components/Svgs/OpenSeaLogo';
+import { OpenSeaButtonLink } from 'components/Link/OpenSeaButtonLink';
 import { RightArrow } from 'components/Svgs/RightArrow';
 import Image from 'next/image';
+import { MARKETPLACE_URLS } from 'utils/constants';
 
 export default function CryptoNativeBestPhase() {
   return (
@@ -14,15 +15,9 @@ export default function CryptoNativeBestPhase() {
           confirmed on OpenSea.
         </h2>
         <div className="grid max-w-xl gap-3 sm:grid-cols-2">
+          <OpenSeaButtonLink href={MARKETPLACE_URLS.cryptoNative} />
           <button
-            className="flex items-center justify-center py-3 text-black duration-300 bg-gray-200 px-9 hover:bg-gray-100"
-            type="button"
-          >
-            <OpenSeaLogo className="mr-2" />
-            View on Opensea
-          </button>
-          <button
-            className="bg-[#431281] flex justify-center items-center text-white py-3"
+            className="flex items-center justify-center py-3 text-white bg-native"
             type="button"
           >
             Dashboard
