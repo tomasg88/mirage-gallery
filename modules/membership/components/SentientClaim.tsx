@@ -111,7 +111,7 @@ export default function MembershipSentientClaim() {
       </div>
       <div>
         <button
-          className="flex items-center justify-center py-3 text-white duration-300 bg-[#E2B310] px-9"
+          className="flex items-center justify-center py-3 text-white duration-300 bg-membership px-9"
           type="button"
         >
           Claim

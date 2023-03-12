@@ -28,7 +28,7 @@ export default function MembershipPage() {
                 {({ selected }) => (
                   <button
                     className={`${
-                      selected ? 'text-[#E2B310]' : ''
+                      selected ? 'text-membership' : ''
                     } outline-none `}
                     type="button"
                   >
@@ -53,7 +53,7 @@ export default function MembershipPage() {
               <div className="max-w-xl space-y-6 text-2xl font-medium font-base">
                 <p>
                   This page is for
-                  <span className="underline">Sentient Members</span> to claim
+                  <span className="underline"> Sentient Members</span> to claim
                   their token from Mirage Gallery Curated drops OR for
                   individuals to check status of existing memberships.
                 </p>
