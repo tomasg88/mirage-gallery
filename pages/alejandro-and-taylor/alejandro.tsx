@@ -24,7 +24,7 @@ export default function AlejandroPage({
   const getFallbackAlt = useCallback(
     (imageIndex: number) =>
       `${collectionSelected.images[imageIndex].name} image`,
-    [collections, collectionSelectedIndex]
+    [collectionSelected.images]
   );
 
   return (
