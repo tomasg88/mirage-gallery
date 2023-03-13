@@ -3,7 +3,7 @@
 }
 
 .drop {
-  @apply relative w-full h-full overflow-hidden;
+  @apply relative w-full h-full overflow-hidden flex items-center justify-center;
 }
 
 .drop img {
@@ -71,5 +71,20 @@
 }
 
 .dropOverlay {
-  @apply absolute bg-black duration-300 bg-opacity-60 flex flex-col justify-between inset-0 w-full h-full p-8 text-white pointer-events-none;
+  @apply absolute;
+  @apply duration-300;
+  @apply flex;
+  @apply flex-col;
+  @apply justify-between;
+  @apply w-[95%];
+  @apply h-[90%];
+  @apply p-4;
+  @apply text-white;
+  @apply pointer-events-none;
+  @apply border-white border;
+
+  box-shadow: 0px 0px 60px 90px rgba(0,0,0,0.75), inset 0px 0px 60px 90px rgba(0,0,0,0.75);
+  -webkit-box-shadow: 0px 0px 60px 90px rgba(0,0,0,0.75), inset 0px 0px 60px 90px rgba(0,0,0,0.75);
+  -moz-box-shadow: 0px 0px 60px 90px rgba(0,0,0,0.75), inset 0px 0px 60px 90px rgba(0,0,0,0.75);
+
 }
