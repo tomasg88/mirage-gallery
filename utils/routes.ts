@@ -31,7 +31,12 @@ export const ROUTES = [
   },
 ];
 
+// CURATED
 export const CURATED_DROP_DETAILS = '/curated/drop';
+export const CURATED_PAGE_SECTIONS = {
+  curatedArtistForm: 'become-curated-artist',
+  mintRandomProject: 'mint-random-project',
+};
 
 // DREAMER PAGES
 export const DREAMERS_8000_DREAMERS = '/dreamers/8000-dreamers';

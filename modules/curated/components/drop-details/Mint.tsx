@@ -28,7 +28,6 @@ export const Mint = ({ projectId }: { projectId: Project['id'] }) => {
   return (
     <div className="grid w-full px-2 mx-auto my-3 max-w-screen-2xl md:grid-cols-2">
       <div>
-        <h2 className="text-2xl text-left">Mint</h2>
         <div className="flex flex-col gap-6 mb-6">
           <label className="flex flex-col w-full mt-6">
             <span className="mb-2 font-sans">Quantity</span>
