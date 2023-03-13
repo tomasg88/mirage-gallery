@@ -38,6 +38,8 @@ export default function SlugPage({ drop }: { drop: Drop }) {
     video,
   } = drop;
 
+  const cover = sampleImages[0];
+
   return (
     <div className="w-full pb-24">
       <DropDetailsHero
@@ -65,6 +67,7 @@ export default function SlugPage({ drop }: { drop: Drop }) {
         <Tab.Panels className="pt-12">
           <Tab.Panel>
             <AboutTheProject
+              cover={cover}
               project={project}
               releaseDate={releaseDate}
               video={video}
