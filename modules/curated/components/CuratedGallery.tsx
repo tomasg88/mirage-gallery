@@ -48,7 +48,11 @@ export const CuratedGallery = ({ drops }: CuratedGalleryProps) => {
             >
               <DropCover drop={drop} />
               {hoveredDrop === drop._id && (
-                <DropCoverOverlay name={drop.name} status={drop.status} />
+                <DropCoverOverlay
+                  artists={drop.artists}
+                  name={drop.name}
+                  status={drop.status}
+                />
               )}
             </div>
           ))}
