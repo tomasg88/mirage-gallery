@@ -108,3 +108,23 @@ export const MEMBERSHIP_MODULE_INFO: MembershipModuleInfo = {
     },
   },
 };
+
+/***************************************/
+/*      SMART CONTRACTS CONSTANTS      */
+/***************************************/
+
+// For minting
+// Changes if it is presale or public sale
+// for presale see onEarlyMintPressed
+//   for early minting quantity is always one
+//   if membershipId === 50 then call earlyIntelligentPurchase
+//   if membershipId < 50 then call earlySentientPurchase
+//   both calls take price which is priceInWei * 1 (fixed)
+// for public sale see onPublicMintPressed
+//   for public minting quantity is in the input field
+//   for public call purchase passing projectId and quantity
+//   for public, price is priceInWei * quantity
+export enum SMART_CONTRACTS {
+  CLAIM_AND_READ = '0xb7ec7bbd2d2193b47027247fc666fb342d23c4b5',
+  MINT = '0xcd484E37931f62013E6BD47FdA62C21480248B47',
+}
