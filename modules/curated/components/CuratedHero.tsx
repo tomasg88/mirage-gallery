@@ -1,4 +1,5 @@
 import { RightArrow } from 'components/Svgs/RightArrow';
+import { CURATED_PAGE_SECTIONS } from 'utils/routes';
 
 export default function CuratedHero() {
   return (
@@ -24,17 +25,17 @@ export default function CuratedHero() {
           <div className="grid max-w-xl gap-3 sm:grid-cols-2">
             <a
               className="p-3 text-center text-gray-800 bg-gray-100"
-              href="#become-curated-artist"
+              href={`#${CURATED_PAGE_SECTIONS.curatedArtistForm}`}
             >
               Become a curated artist
             </a>
-            <button
+            <a
               className="flex items-center justify-center py-3 text-white bg-curated"
-              type="button"
+              href={`#${CURATED_PAGE_SECTIONS.mintRandomProject}`}
             >
               Mint
               <RightArrow className="ml-2" />
-            </button>
+            </a>
           </div>
         </div>
       </div>

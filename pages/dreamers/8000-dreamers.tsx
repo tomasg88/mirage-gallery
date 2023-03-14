@@ -17,7 +17,7 @@ export default function EightThousandDreamersPage() {
           the light.
         </HeroTitle>
         <HeroTitle>
-          Are you a <span className="underline text-dreamers">Dreamers?</span>
+          Are you a <span className="underline text-dreamers">Dreamer?</span>
         </HeroTitle>
       </div>
     </div>

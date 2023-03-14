@@ -3,18 +3,9 @@ import { HeroMembership } from 'modules/membership/components/HeroMembership';
 import { MembersSays } from 'modules/membership/components/MembersSays';
 import { Tiers } from 'modules/membership/components/Tiers';
 import { ViewOrClaim } from 'modules/membership/components/ViewOrClaim';
-import { Fragment } from 'react';
 import { Tab } from '@headlessui/react';
 import MembershipSentientClaim from 'modules/membership/components/SentientClaim';
-
-const TABS = [
-  {
-    title: 'About',
-  },
-  {
-    title: 'Sentient claim',
-  },
-];
+import { ButtonTab } from 'components/Button/ButtonTab/ButtonTab';
 
 export default function MembershipPage() {
   return (
@@ -23,20 +14,11 @@ export default function MembershipPage() {
       <Tab.Group defaultIndex={0}>
         <Tab.List className="mt-24 border-b outline-none">
           <div className="flex items-center justify-start gap-6 px-2 py-3 mx-auto text-xs md:text-base max-w-screen-2xl md:gap-12">
-            {TABS.map(({ title }) => (
-              <Tab as={Fragment} key={title}>
-                {({ selected }) => (
-                  <button
-                    className={`${
-                      selected ? 'text-membership' : ''
-                    } outline-none `}
-                    type="button"
-                  >
-                    {title}
-                  </button>
-                )}
-              </Tab>
-            ))}
+            <ButtonTab activeClasses="text-membership" title={'About'} />
+            <ButtonTab
+              activeClasses="text-membership"
+              title={'Sentient claim'}
+            />
           </div>
         </Tab.List>
         <Tab.Panels className="pt-12 ">

@@ -1,29 +1,14 @@
 import { DropDetailsHero } from 'modules/curated/components/drop-details/DropDetailsHero';
 import { sanityClient } from 'lib/sanity.client';
 import { dropBySlugQuery } from 'lib/queries';
-import { Drop } from 'types/drops';
+import { Drop, MintStatus } from 'types/drops';
 import { GetServerSideProps, GetServerSidePropsResult } from 'next';
 import { Tab } from '@headlessui/react';
 import { AboutTheProject } from 'modules/curated/components/drop-details/AboutTheProject';
 import { ArtistsTab } from 'modules/curated/components/drop-details/ArtistTab';
-import { Claim } from 'modules/curated/components/drop-details/Claim';
-import { Mint } from 'modules/curated/components/drop-details/Mint';
-import { Fragment } from 'react';
-
-const TABS = [
-  {
-    title: 'About the project',
-  },
-  {
-    title: 'The artist',
-  },
-  {
-    title: 'Sentient claim',
-  },
-  {
-    title: 'Mint',
-  },
-];
+import { ClaimForm } from 'components/Forms/ClaimForm';
+import { MintForm } from 'components/Forms/MintForm';
+import { ButtonTab } from 'components/Button/ButtonTab/ButtonTab';
 
 export default function SlugPage({ drop }: { drop: Drop }) {
   const {
@@ -38,6 +23,9 @@ export default function SlugPage({ drop }: { drop: Drop }) {
     video,
   } = drop;
 
+  const cover = sampleImages[0];
+  const isSoldOut = status === MintStatus.SOLD_OUT;
+
   return (
     <div className="w-full pb-24">
       <DropDetailsHero
@@ -49,22 +37,17 @@ export default function SlugPage({ drop }: { drop: Drop }) {
       />
       <Tab.Group defaultIndex={0}>
         <Tab.List className="flex items-center justify-start gap-6 px-2 py-3 mx-auto text-xs border-b md:text-base md:gap-12 max-w-screen-2xl">
-          {TABS.map(({ title }) => (
-            <Tab as={Fragment} key={title}>
-              {({ selected }) => (
-                <button
-                  className={`${selected ? 'text-curated' : ''} outline-none `}
-                  type="button"
-                >
-                  {title}
-                </button>
-              )}
-            </Tab>
-          ))}
+          <ButtonTab activeClasses="text-curated" title={'About the project'} />
+          <ButtonTab activeClasses="text-curated" title={'The artist'} />
+          <ButtonTab activeClasses="text-curated" title={'Sentient claim'} />
+          {!isSoldOut && (
+            <ButtonTab activeClasses="text-curated" title={'Mint'} />
+          )}
         </Tab.List>
         <Tab.Panels className="pt-12">
           <Tab.Panel>
             <AboutTheProject
+              cover={cover}
               project={project}
               releaseDate={releaseDate}
               video={video}
@@ -74,10 +57,10 @@ export default function SlugPage({ drop }: { drop: Drop }) {
             <ArtistsTab artists={artists} marketplaceUrl={marketplaceUrl} />
           </Tab.Panel>
           <Tab.Panel>
-            <Claim />
+            <ClaimForm projectId={project.id} />
           </Tab.Panel>
           <Tab.Panel>
-            <Mint project={project} />
+            <MintForm projectId={project.id} />
           </Tab.Panel>
         </Tab.Panels>
       </Tab.Group>

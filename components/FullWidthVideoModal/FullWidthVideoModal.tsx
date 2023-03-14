@@ -3,8 +3,17 @@ import Image from 'next/image';
 import { BigPlayButton, Player } from 'video-react';
 import { Dialog, Transition } from '@headlessui/react';
 import { Drop } from 'types/drops';
+import { CloudinaryAsset } from 'types/cloudinary';
 
-export const FullWidthVideoModal = ({ video }: { video: Drop['video'] }) => {
+type FullWidthVideoModalProps = {
+  cover: CloudinaryAsset;
+  video: Drop['video'];
+};
+
+export const FullWidthVideoModal = ({
+  cover,
+  video,
+}: FullWidthVideoModalProps) => {
   const [isOpen, setIsOpen] = useState(false);
 
   function closeModal() {
@@ -53,7 +62,7 @@ export const FullWidthVideoModal = ({ video }: { video: Drop['video'] }) => {
           alt="imagen"
           className="object-cover w-full"
           height={500}
-          src="/assets/2.jpg"
+          src={cover.url}
           width={1200}
         />
       </div>
@@ -87,7 +96,7 @@ export const FullWidthVideoModal = ({ video }: { video: Drop['video'] }) => {
                   <Dialog.Title as="h3" className="hidden">
                     About
                   </Dialog.Title>
-                  <Player poster="/assets/2.jpg" src={video.url}>
+                  <Player poster={cover.url} src={video.url}>
                     <BigPlayButton position="center" />
                   </Player>
                 </Dialog.Panel>

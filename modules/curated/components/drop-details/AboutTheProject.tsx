@@ -2,14 +2,17 @@ import { FullWidthVideoModal } from 'components/FullWidthVideoModal/FullWidthVid
 import React from 'react';
 import { Drop } from 'types/drops';
 import { parseISO } from 'date-fns';
+import { CloudinaryAsset } from 'types/cloudinary';
 
 type AboutTheProjectProps = {
+  cover: CloudinaryAsset;
   project: Drop['project'];
   releaseDate: Drop['releaseDate'];
   video: Drop['video'];
 };
 
 export const AboutTheProject = ({
+  cover,
   project,
   releaseDate,
   video,
@@ -19,7 +22,7 @@ export const AboutTheProject = ({
       <h2 className="text-2xl text-left">About the project</h2>
     </div>
     <p>{releaseDate && parseISO(releaseDate).toString()}</p>
-    {video && <FullWidthVideoModal video={video} />}
+    {video && <FullWidthVideoModal cover={cover} video={video} />}
     <p className="max-w-6xl mr-auto">{project.description}</p>
   </div>
 );

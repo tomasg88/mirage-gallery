@@ -8,7 +8,7 @@ export type Artist = {
   profilePicture: CloudinaryAsset;
 };
 
-type Project = {
+export type Project = {
   name: string;
   description: string;
   id: string;

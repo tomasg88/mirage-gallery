@@ -27,7 +27,7 @@ export const ConnectWalletButton = ({
     (!authenticationStatus || authenticationStatus === 'authenticated');
 
   const handleClick = useCallback(
-    connected ? openAccountModal : openConnectModal,
+    () => (connected ? openAccountModal : openConnectModal),
     [connected, openAccountModal, openConnectModal]
   );
 

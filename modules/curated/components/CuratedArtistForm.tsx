@@ -5,6 +5,7 @@ import { EmailEmptyIcon } from 'components/Svgs/EmailEmptyIcon';
 import { useState } from 'react';
 import { sanityClient } from 'lib/sanity.client';
 import { SanityDocumentStub } from '@sanity/client';
+import { CURATED_PAGE_SECTIONS } from 'utils/routes';
 
 type ArtistForm = {
   comments: string;
@@ -71,7 +72,7 @@ export const CuratedArtistForm = (): JSX.Element => {
   return (
     <div
       className="flex flex-col py-20 mx-auto max-w-screen-2xl"
-      id="become-curated-artist"
+      id={CURATED_PAGE_SECTIONS.curatedArtistForm}
     >
       <HeroTitle accentColor={'text-curated'} subtitle="Apply">
         Become a curated artist
