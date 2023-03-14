@@ -11,6 +11,9 @@ export const MARKETPLACE_URLS = {
   membership: 'https://opensea.io/collection/mirage-gallery-memberships',
 };
 
+/***********************************************/
+/*     PROJECTS CONFIGURATION FOR HOME PAGE    */
+/***********************************************/
 export const HOME_INFO_BY_MODULE: GeneralModulesInfo = {
   [Modules.ALEJANDRO_AND_TAYLOR]: {
     ctaButton: 'Explore Alejandro & Taylor',
@@ -90,6 +93,9 @@ export const HOME_INFO_BY_MODULE: GeneralModulesInfo = {
   },
 };
 
+/***********************************************/
+/*   MEMBERSHIP CONFIGURATION FOR HOME PAGE    */
+/***********************************************/
 export const MEMBERSHIP_MODULE_INFO: MembershipModuleInfo = {
   ctaButton: 'Explore memberships',
   href: '/membership',
@@ -124,6 +130,7 @@ export const MEMBERSHIP_MODULE_INFO: MembershipModuleInfo = {
 //   for public minting quantity is in the input field
 //   for public call purchase passing projectId and quantity
 //   for public, price is priceInWei * quantity
+// for claiming, check users have not claimed already
 export enum SMART_CONTRACTS {
   CLAIM_AND_READ = '0xb7ec7bbd2d2193b47027247fc666fb342d23c4b5',
   MINT = '0xcd484E37931f62013E6BD47FdA62C21480248B47',
