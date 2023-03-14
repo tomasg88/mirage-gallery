@@ -20,6 +20,7 @@ export type ChainResponse = {
 };
 
 export enum FunctionNames {
+  CLAIM_SENTIENT = 'claimSentient',
   PROJECT_TOKEN_INFO = 'projectTokenInfo',
   EARLY_INTELLIGENT_PURCHASE = 'earlyIntelligentPurchase',
   EARLT_SENTIENT_PURCHASE = 'earlySentientPurchase',
