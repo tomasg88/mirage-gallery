@@ -6,7 +6,7 @@ import { GetServerSideProps, GetServerSidePropsResult } from 'next';
 import { Tab } from '@headlessui/react';
 import { AboutTheProject } from 'modules/curated/components/drop-details/AboutTheProject';
 import { ArtistsTab } from 'modules/curated/components/drop-details/ArtistTab';
-import { Claim } from 'modules/curated/components/drop-details/Claim';
+import { ClaimForm } from 'components/Forms/ClaimForm';
 import { MintForm } from 'components/Forms/MintForm';
 import { ButtonTab } from 'components/Button/ButtonTab/ButtonTab';
 
@@ -55,7 +55,7 @@ export default function SlugPage({ drop }: { drop: Drop }) {
             <ArtistsTab artists={artists} marketplaceUrl={marketplaceUrl} />
           </Tab.Panel>
           <Tab.Panel>
-            <Claim />
+            <ClaimForm projectId={project.id} />
           </Tab.Panel>
           <Tab.Panel>
             <MintForm projectId={project.id} />
