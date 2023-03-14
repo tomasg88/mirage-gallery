@@ -18,3 +18,24 @@ export type ChainResponse = {
   name?: string;
   unsupported?: boolean;
 };
+
+export enum FunctionNames {
+  PROJECT_TOKEN_INFO = 'projectTokenInfo',
+  EARLY_INTELLIGENT_PURCHASE = 'earlyIntelligentPurchase',
+  EARLT_SENTIENT_PURCHASE = 'earlySentientPurchase',
+}
+
+export type ProjectTokenInfoResult = {
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  additionalPayee: any;
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  additionalPayeePercentage: any;
+  artistAddress: string;
+  artworks: string;
+  currency: string;
+  earlyActive: boolean;
+  maxArtworks: string;
+  maxEarly: string;
+  pricePerTokenInWei: string;
+  publicActive: boolean;
+};
