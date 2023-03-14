@@ -1,6 +1,6 @@
 import Image from 'next/image';
 import { HeroTitle } from 'components/HeroTitle/HeroTitle';
-import { Mint } from './drop-details/Mint';
+import { MintForm } from 'components/Forms/MintForm';
 import { Drop, Project } from 'types/drops';
 import { useCallback, useState } from 'react';
 import { CloudinaryAsset } from 'types/cloudinary';
@@ -69,7 +69,9 @@ export const MintRandomProject = ({ mintingDrops }: MintRandomProjectProps) => {
             )
         )}
       </div>
-      <div>{selectedProjectId && <Mint projectId={selectedProjectId} />}</div>
+      <div>
+        {selectedProjectId && <MintForm projectId={selectedProjectId} />}
+      </div>
     </div>
   );
 };
