@@ -37,10 +37,12 @@ export default function SlugPage({ drop }: { drop: Drop }) {
       />
       <Tab.Group defaultIndex={0}>
         <Tab.List className="flex items-center justify-start gap-6 px-2 py-3 mx-auto text-xs border-b md:text-base md:gap-12 max-w-screen-2xl">
-          <ButtonTab title={'About the project'} />
-          <ButtonTab title={'The artist'} />
-          <ButtonTab title={'Sentient claim'} />
-          {!isSoldOut && <ButtonTab title={'Mint'} />}
+          <ButtonTab activeClasses="text-curated" title={'About the project'} />
+          <ButtonTab activeClasses="text-curated" title={'The artist'} />
+          <ButtonTab activeClasses="text-curated" title={'Sentient claim'} />
+          {!isSoldOut && (
+            <ButtonTab activeClasses="text-curated" title={'Mint'} />
+          )}
         </Tab.List>
         <Tab.Panels className="pt-12">
           <Tab.Panel>
