@@ -1,28 +1,22 @@
 import { curatedAbi } from 'curated-abi';
 import { useEffect, useState } from 'react';
 import { Project } from 'types/drops';
-import { ProjectTokenInfoResult } from 'types/web3';
-import { useContractRead, usePrepareContractWrite } from 'wagmi';
-import { curatedContractAddress } from './useMintProcess';
+import { FunctionNames, ProjectTokenInfoResult } from 'types/web3';
+import { SMART_CONTRACTS } from 'utils/constants';
+import { useContractRead } from 'wagmi';
 
 export const useReadProcess = ({ projectId }: { projectId: Project['id'] }) => {
   const [parsedData, setParsedData] = useState<ProjectTokenInfoResult | null>(
     null
   );
 
-  const { config } = usePrepareContractWrite({
-    abi: curatedAbi,
-    address: curatedContractAddress,
-    args: [`${projectId}`],
-    functionName: '',
-  });
-
   // TODO - proper type of smart contract response
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   const { data }: { data: any } = useContractRead({
-    ...config,
+    abi: curatedAbi,
+    address: SMART_CONTRACTS.CLAIM_AND_READ,
     args: [`${projectId}`],
-    functionName: 'projectTokenInfo',
+    functionName: FunctionNames.PROJECT_TOKEN_INFO,
     watch: true,
   });
 
